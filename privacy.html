@@ -15,47 +15,32 @@
             max-width: 640px;
             margin: 0 auto;
         }
-        h1 {
-            font-family: Georgia, serif;
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        .date {
-            font-size: 13px;
-            color: rgba(61,46,30,0.4);
-            margin-bottom: 32px;
-        }
-        h2 {
-            font-size: 15px;
-            font-weight: 600;
-            margin-top: 28px;
-            margin-bottom: 8px;
-        }
-        p {
-            font-size: 14px;
-            color: rgba(61,46,30,0.7);
-            margin-bottom: 12px;
-        }
-        .footer {
-            margin-top: 48px;
-            padding-top: 24px;
-            border-top: 1px solid rgba(61,46,30,0.08);
-            font-size: 12px;
-            color: rgba(61,46,30,0.3);
-        }
-        .footer a {
-            color: rgba(61,46,30,0.4);
-            text-decoration: none;
-        }
+        h1 { font-family: Georgia, serif; font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+        .date { font-size: 13px; color: rgba(61,46,30,0.4); margin-bottom: 32px; }
+        h2 { font-size: 15px; font-weight: 600; margin-top: 28px; margin-bottom: 8px; }
+        p { font-size: 14px; color: rgba(61,46,30,0.7); margin-bottom: 12px; }
+        .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(61,46,30,0.08); font-size: 12px; color: rgba(61,46,30,0.3); }
+        .footer a { color: rgba(61,46,30,0.4); text-decoration: none; }
+        .lang-toggle { position: fixed; top: 20px; right: 24px; display: flex; gap: 4px; z-index: 100; }
+        .lang-btn { background: none; border: 1px solid rgba(61,46,30,0.12); border-radius: 14px; padding: 4px 12px; font-size: 11px; letter-spacing: 1px; color: rgba(61,46,30,0.35); cursor: pointer; transition: all 0.2s ease; font-family: -apple-system, sans-serif; }
+        .lang-btn.active { background: rgba(61,46,30,0.08); color: #3d2e1e; border-color: rgba(61,46,30,0.2); }
+        [data-lang] { display: none; }
+        [data-lang].show { display: block; }
     </style>
 </head>
 <body>
 
+<div class="lang-toggle">
+    <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
+    <button class="lang-btn" onclick="setLang('ko')" id="btn-ko">KR</button>
+</div>
+
+<!-- ENGLISH -->
+<div data-lang="en" class="show">
 <h1>Privacy Policy</h1>
 <p class="date">Effective Date: February 19, 2026</p>
 
-<p>Iamcraft ("we," "our," or "us") operates the following mobile applications: <strong>Core 1</strong> and <strong>A Moment of Stillness (정적의 시간)</strong>. This Privacy Policy explains how we handle your information when you use our apps.</p>
+<p>Iamcraft ("we," "our," or "us") operates the following mobile applications: <strong>Core 1</strong> and <strong>A Moment of Stillness</strong>. This Privacy Policy explains how we handle your information when you use our apps.</p>
 
 <h2>1. Information We Collect</h2>
 <p>We do not collect any personal data. All data is stored locally on your device using the device's built-in storage. No data is transmitted to our servers or any third party.</p>
@@ -86,10 +71,65 @@
 
 <h2>9. Contact Us</h2>
 <p>If you have any questions about this Privacy Policy, please contact us at: support@iamcraft.co</p>
+</div>
+
+<!-- KOREAN -->
+<div data-lang="ko">
+<h1>개인정보처리방침</h1>
+<p class="date">시행일: 2026년 2월 19일</p>
+
+<p>Iamcraft("당사")는 <strong>Core 1</strong> 및 <strong>정적의 시간</strong> 모바일 애플리케이션을 운영합니다. 본 개인정보처리방침은 앱 사용 시 귀하의 정보를 어떻게 처리하는지 설명합니다.</p>
+
+<h2>1. 수집하는 정보</h2>
+<p>당사는 어떠한 개인 정보도 수집하지 않습니다. 모든 데이터는 기기의 내장 저장소에 로컬로만 저장됩니다. 당사 서버나 제3자에게 전송되는 데이터는 없습니다.</p>
+<p>Core 1이 저장하는 데이터: 습관 데이터, 체크인 기록, 나무 이름, 설정.</p>
+<p>정적의 시간이 저장하는 데이터: 호흡 패턴 설정, 완료한 세션 날짜, 알림 시간.</p>
+<p>당사가 수집하지 않는 정보: 이름, 이메일 주소, 위치 데이터, 건강 정보, 사진, 연락처 또는 기타 개인 정보.</p>
+
+<h2>2. 데이터 저장</h2>
+<p>모든 데이터는 귀하의 기기에만 저장됩니다. 당사는 사용자 데이터를 저장하는 서버를 운영하지 않습니다. 앱을 삭제하면 해당 앱의 모든 로컬 데이터가 영구 삭제됩니다.</p>
+
+<h2>3. 알림</h2>
+<p>정적의 시간은 예약된 호흡 세션을 알려주는 로컬 알림을 보낼 수 있습니다. 이 알림은 전적으로 귀하의 기기에서 처리됩니다. 푸시 알림 서버가 관여하지 않으며 데이터가 전송되지 않습니다.</p>
+
+<h2>4. 제3자 서비스</h2>
+<p>당사는 사용자 데이터를 수집하는 분석 도구, 광고 네트워크 또는 제3자 서비스를 사용하지 않습니다. 결제는 Apple App Store를 통해서만 처리되며, 당사는 귀하의 결제 정보에 접근할 수 없습니다.</p>
+
+<h2>5. 아동 개인정보</h2>
+<p>당사의 앱은 만 4세 이상의 사용자를 대상으로 합니다. 앱이 어떠한 개인정보도 수집하지 않으므로 연령에 따른 특별한 데이터 처리는 없습니다.</p>
+
+<h2>6. 귀하의 권리</h2>
+<p>모든 데이터가 귀하의 기기에 로컬로 저장되므로, 귀하는 언제든지 데이터를 완전히 통제할 수 있습니다. 앱을 삭제하면 모든 데이터를 삭제할 수 있습니다.</p>
+
+<h2>7. 해외 사용자</h2>
+<p>당사의 앱은 귀하의 위치에 관계없이 모든 데이터를 기기에 로컬로 저장합니다. 기기에서 데이터가 전송되지 않으므로 데이터가 국경을 넘지 않습니다. 본 방침은 데이터 최소화 원칙을 통해 GDPR(EU), CCPA(캘리포니아), PIPA(한국) 요건을 준수합니다.</p>
+
+<h2>8. 방침 변경</h2>
+<p>본 개인정보처리방침은 수시로 업데이트될 수 있습니다. 변경 시 본 페이지에 새 방침을 게시하고 위의 "시행일"을 업데이트하여 알려드립니다.</p>
+
+<h2>9. 문의</h2>
+<p>본 개인정보처리방침에 관한 문의사항이 있으시면 support@iamcraft.co로 연락해 주세요.</p>
+</div>
 
 <div class="footer">
     <p>© 2026 Iamcraft. All rights reserved.<br><a href="https://iamcraft.co">iamcraft.co</a></p>
 </div>
+
+<script>
+function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.toggle('show', el.dataset.lang === lang);
+    });
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+    document.documentElement.lang = lang === 'ko' ? 'ko' : 'en';
+    localStorage.setItem('iamcraft-lang', lang);
+}
+const saved = localStorage.getItem('iamcraft-lang');
+if (saved) { setLang(saved); } else {
+    setLang(navigator.language.startsWith('ko') ? 'ko' : 'en');
+}
+</script>
 
 </body>
 </html>

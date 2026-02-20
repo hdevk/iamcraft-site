@@ -15,47 +15,32 @@
             max-width: 640px;
             margin: 0 auto;
         }
-        h1 {
-            font-family: Georgia, serif;
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        .date {
-            font-size: 13px;
-            color: rgba(61,46,30,0.4);
-            margin-bottom: 32px;
-        }
-        h2 {
-            font-size: 15px;
-            font-weight: 600;
-            margin-top: 28px;
-            margin-bottom: 8px;
-        }
-        p {
-            font-size: 14px;
-            color: rgba(61,46,30,0.7);
-            margin-bottom: 12px;
-        }
-        .footer {
-            margin-top: 48px;
-            padding-top: 24px;
-            border-top: 1px solid rgba(61,46,30,0.08);
-            font-size: 12px;
-            color: rgba(61,46,30,0.3);
-        }
-        .footer a {
-            color: rgba(61,46,30,0.4);
-            text-decoration: none;
-        }
+        h1 { font-family: Georgia, serif; font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+        .date { font-size: 13px; color: rgba(61,46,30,0.4); margin-bottom: 32px; }
+        h2 { font-size: 15px; font-weight: 600; margin-top: 28px; margin-bottom: 8px; }
+        p { font-size: 14px; color: rgba(61,46,30,0.7); margin-bottom: 12px; }
+        .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(61,46,30,0.08); font-size: 12px; color: rgba(61,46,30,0.3); }
+        .footer a { color: rgba(61,46,30,0.4); text-decoration: none; }
+        .lang-toggle { position: fixed; top: 20px; right: 24px; display: flex; gap: 4px; z-index: 100; }
+        .lang-btn { background: none; border: 1px solid rgba(61,46,30,0.12); border-radius: 14px; padding: 4px 12px; font-size: 11px; letter-spacing: 1px; color: rgba(61,46,30,0.35); cursor: pointer; transition: all 0.2s ease; font-family: -apple-system, sans-serif; }
+        .lang-btn.active { background: rgba(61,46,30,0.08); color: #3d2e1e; border-color: rgba(61,46,30,0.2); }
+        [data-lang] { display: none; }
+        [data-lang].show { display: block; }
     </style>
 </head>
 <body>
 
+<div class="lang-toggle">
+    <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
+    <button class="lang-btn" onclick="setLang('ko')" id="btn-ko">KR</button>
+</div>
+
+<!-- ENGLISH -->
+<div data-lang="en" class="show">
 <h1>Terms of Service</h1>
 <p class="date">Effective Date: February 19, 2026</p>
 
-<p>Welcome to Iamcraft. By downloading, installing, or using any of our applications — including <strong>Core 1</strong> and <strong>A Moment of Stillness (정적의 시간)</strong> — you agree to these Terms of Service ("Terms"). Please read them carefully.</p>
+<p>Welcome to Iamcraft. By downloading, installing, or using any of our applications — including <strong>Core 1</strong> and <strong>A Moment of Stillness</strong> — you agree to these Terms of Service ("Terms"). Please read them carefully.</p>
 
 <h2>1. Acceptance of Terms</h2>
 <p>By accessing or using any Iamcraft application, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the apps.</p>
@@ -91,10 +76,70 @@
 
 <h2>11. Contact Us</h2>
 <p>If you have any questions about these Terms, please contact us at: support@iamcraft.co</p>
+</div>
+
+<!-- KOREAN -->
+<div data-lang="ko">
+<h1>서비스 이용약관</h1>
+<p class="date">시행일: 2026년 2월 19일</p>
+
+<p>Iamcraft에 오신 것을 환영합니다. <strong>Core 1</strong> 및 <strong>정적의 시간</strong>을 포함한 당사의 애플리케이션을 다운로드, 설치 또는 사용함으로써 본 서비스 이용약관("약관")에 동의하게 됩니다. 주의 깊게 읽어주세요.</p>
+
+<h2>1. 약관 동의</h2>
+<p>Iamcraft 애플리케이션에 접근하거나 사용함으로써 본 약관에 구속되는 것에 동의합니다. 본 약관에 동의하지 않으시면 앱을 사용하지 마세요.</p>
+
+<h2>2. 서비스 설명</h2>
+<p>Core 1은 한 번에 하나의 습관에 집중하도록 돕는 습관 형성 애플리케이션입니다.</p>
+<p>정적의 시간은 맞춤형 호흡 패턴, 일일 알림, 세션 기록 기능을 갖춘 5분 호흡 타이머 애플리케이션입니다.</p>
+<p>두 앱 모두 모든 데이터를 기기에 로컬로 저장합니다. 이 앱들은 의료, 심리, 건강 상담, 진단 또는 치료를 제공하지 않습니다. 모든 결과에 대한 책임은 전적으로 사용자에게 있습니다.</p>
+
+<h2>3. 연령 요건</h2>
+<p>당사의 앱은 만 4세 이상의 사용자를 대상으로 합니다. 앱을 사용함으로써 이 연령 요건을 충족하거나 부모 또는 보호자의 동의를 받았음을 확인합니다.</p>
+
+<h2>4. 사용자 책임</h2>
+<p>귀하는 기기의 보안과 앱 내에 저장된 데이터를 유지할 책임이 있습니다. 모든 데이터가 로컬로 저장되므로, 기기를 분실하거나 손상되거나 앱을 삭제한 경우 데이터를 복구할 수 없습니다.</p>
+
+<h2>5. 구매 및 결제</h2>
+<p>당사의 앱은 Apple App Store를 통해 처리되는 인앱 구매를 제공할 수 있습니다. 모든 결제는 Apple의 이용약관에 따릅니다. 당사는 결제를 직접 처리하지 않으며 귀하의 결제 정보에 접근할 수 없습니다. 환불 요청은 Apple로 문의해 주세요.</p>
+
+<h2>6. 지적재산권</h2>
+<p>Iamcraft 애플리케이션 내의 모든 콘텐츠, 디자인, 코드 및 상표는 Iamcraft의 지적재산입니다. 서면 허가 없이 당사의 앱을 복사, 수정, 배포하거나 이를 기반으로 2차 저작물을 만들 수 없습니다.</p>
+
+<h2>7. 보증 면책</h2>
+<p>당사의 앱은 명시적이든 묵시적이든 어떠한 종류의 보증 없이 "있는 그대로" 제공됩니다. 당사는 앱이 중단 없이, 오류 없이 또는 유해한 구성 요소 없이 작동한다고 보증하지 않습니다. 당사의 앱은 전문적인 의료, 심리 또는 건강 조언을 대체하지 않습니다. 앱 사용 및 모든 결과는 전적으로 사용자의 책임입니다.</p>
+
+<h2>8. 책임 제한</h2>
+<p>관련 법률이 허용하는 최대 범위 내에서, Iamcraft는 앱 사용 또는 사용 불능으로 인한 간접적, 부수적, 특별, 결과적 또는 징벌적 손해에 대해 책임을 지지 않습니다.</p>
+
+<h2>9. 준거법</h2>
+<p>본 약관은 미국 텍사스주 법률에 의해 규율되고 해석되며, 법률 충돌 조항은 적용되지 않습니다.</p>
+
+<h2>10. 약관 변경</h2>
+<p>당사는 언제든지 본 약관을 수정할 권리를 보유합니다. 중대한 변경 시 위의 "시행일"을 업데이트하여 사용자에게 알립니다. 변경 후 앱을 계속 사용하면 새 약관에 동의한 것으로 간주됩니다.</p>
+
+<h2>11. 문의</h2>
+<p>본 약관에 관한 문의사항이 있으시면 support@iamcraft.co로 연락해 주세요.</p>
+</div>
 
 <div class="footer">
     <p>© 2026 Iamcraft. All rights reserved.<br><a href="https://iamcraft.co">iamcraft.co</a></p>
 </div>
+
+<script>
+function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.toggle('show', el.dataset.lang === lang);
+    });
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+    document.documentElement.lang = lang === 'ko' ? 'ko' : 'en';
+    localStorage.setItem('iamcraft-lang', lang);
+}
+const saved = localStorage.getItem('iamcraft-lang');
+if (saved) { setLang(saved); } else {
+    setLang(navigator.language.startsWith('ko') ? 'ko' : 'en');
+}
+</script>
 
 </body>
 </html>

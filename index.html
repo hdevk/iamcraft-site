@@ -1,168 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iamcraft — 나를 만드는 기술</title>
-  <meta name="description" content="Iamcraft builds apps that help you craft who you are. Core 1: one habit, one tree, that's all you need.">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500&family=Source+Serif+4:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap');
-    
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
-    body {
-      font-family: 'DM Sans', 'Noto Sans KR', sans-serif;
-      background: #faf8f4;
-      color: #3d3225;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .container {
-      text-align: center;
-      padding: 48px 24px;
-      max-width: 520px;
-    }
-    
-    .logo-mark {
-      margin-bottom: 32px;
-    }
-    
-    h1 {
-      font-family: 'Source Serif 4', 'Noto Serif KR', serif;
-      font-size: 36px;
-      font-weight: 700;
-      color: #3d3225;
-      margin-bottom: 8px;
-      letter-spacing: -1px;
-    }
-    
-    .tagline {
-      font-size: 15px;
-      color: #8b7355;
-      margin-bottom: 48px;
-      letter-spacing: 0.5px;
-    }
-    
-    .app-card {
-      background: rgba(255,255,255,0.6);
-      border: 1.5px solid rgba(138,115,85,0.12);
-      border-radius: 20px;
-      padding: 32px 28px;
-      margin-bottom: 24px;
-      text-align: left;
-      transition: transform 0.2s;
-    }
-    
-    .app-card:hover {
-      transform: translateY(-2px);
-    }
-    
-    .app-name {
-      font-family: 'Source Serif 4', 'Noto Serif KR', serif;
-      font-size: 22px;
-      font-weight: 700;
-      color: #3d3225;
-      margin-bottom: 4px;
-    }
-    
-    .app-subtitle {
-      font-size: 13px;
-      color: #8b7355;
-      margin-bottom: 14px;
-    }
-    
-    .app-desc {
-      font-size: 14px;
-      color: #5c4a3a;
-      line-height: 1.7;
-    }
-    
-    .badge {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 500;
-      padding: 4px 10px;
-      border-radius: 6px;
-      margin-top: 14px;
-    }
-    
-    .badge-soon {
-      background: rgba(74,124,89,0.1);
-      color: #4a7c59;
-    }
-    
-    .links {
-      display: flex;
-      gap: 24px;
-      justify-content: center;
-      margin-top: 40px;
-      flex-wrap: wrap;
-    }
-    
-    .links a {
-      font-size: 13px;
-      color: #8b7355;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    
-    .links a:hover {
-      color: #4a7c59;
-    }
-    
-    .footer {
-      margin-top: 48px;
-      font-size: 12px;
-      color: #a89880;
-    }
-    
-    .footer a {
-      color: #a89880;
-      text-decoration: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iamcraft — The craft of becoming</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, 'Helvetica Neue', Georgia, serif;
+            background: #f5f0e8;
+            color: #3d2e1e;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 24px 60px;
+            text-align: center;
+        }
+
+        /* Language toggle */
+        .lang-toggle {
+            position: fixed;
+            top: 20px;
+            right: 24px;
+            display: flex;
+            gap: 4px;
+            z-index: 100;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 1px solid rgba(61,46,30,0.12);
+            border-radius: 14px;
+            padding: 4px 12px;
+            font-size: 11px;
+            letter-spacing: 1px;
+            color: rgba(61,46,30,0.35);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: -apple-system, sans-serif;
+        }
+
+        .lang-btn.active {
+            background: rgba(61,46,30,0.08);
+            color: #3d2e1e;
+            border-color: rgba(61,46,30,0.2);
+        }
+
+        /* Title */
+        h1 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .tagline {
+            font-size: 15px;
+            font-weight: 400;
+            color: rgba(61,46,30,0.5);
+            margin-bottom: 56px;
+        }
+
+        /* App Cards */
+        .app-card {
+            background: white;
+            border-radius: 16px;
+            padding: 36px 32px;
+            margin-bottom: 24px;
+            text-align: left;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+
+        .app-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 6px;
+        }
+
+        .app-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Stillness icon inline SVG */
+        .stillness-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            flex-shrink: 0;
+            background: radial-gradient(circle at 50% 50%, #0f142d, #080a1e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stillness-icon-circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid rgba(150,170,215,0.4);
+            background: radial-gradient(circle, rgba(150,170,215,0.15), rgba(150,170,215,0.05));
+        }
+
+        .app-card h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .app-subtitle {
+            font-size: 13px;
+            color: rgba(61,46,30,0.45);
+            margin-bottom: 16px;
+        }
+
+        .app-desc {
+            font-size: 14px;
+            color: rgba(61,46,30,0.65);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+        }
+
+        .badge-live {
+            background: rgba(61,46,30,0.08);
+            color: #3d2e1e;
+            border: 1px solid rgba(61,46,30,0.12);
+            transition: all 0.2s ease;
+        }
+
+        .badge-live:hover {
+            background: rgba(61,46,30,0.12);
+        }
+
+        .badge-review {
+            background: rgba(61,46,30,0.04);
+            color: rgba(61,46,30,0.5);
+            border: 1px solid rgba(61,46,30,0.08);
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 56px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(61,46,30,0.06);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            margin-bottom: 24px;
+        }
+
+        .footer-links a {
+            font-size: 13px;
+            color: rgba(61,46,30,0.4);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: rgba(61,46,30,0.6);
+        }
+
+        .copyright {
+            font-size: 12px;
+            color: rgba(61,46,30,0.25);
+            line-height: 1.8;
+        }
+
+        .copyright a {
+            color: rgba(61,46,30,0.25);
+            text-decoration: none;
+        }
+
+        /* Language switching */
+        [data-lang] { display: none; }
+        [data-lang].show { display: inline; }
+        p[data-lang].show, div[data-lang].show { display: block; }
+        a[data-lang].show { display: inline-block; }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="logo-mark">
-      <svg width="56" height="56" viewBox="0 0 120 120">
-        <circle cx="60" cy="60" r="52" fill="none" stroke="#4a7c59" stroke-width="1.2" opacity="0.1" stroke-dasharray="4 4"/>
-        <circle cx="60" cy="60" r="43" fill="none" stroke="#4a7c59" stroke-width="1.2" opacity="0.15" stroke-dasharray="3 5"/>
-        <circle cx="60" cy="60" r="34" fill="none" stroke="#4a7c59" stroke-width="1.5" opacity="0.25"/>
-        <circle cx="60" cy="60" r="26" fill="none" stroke="#4a7c59" stroke-width="2" opacity="0.4"/>
-        <circle cx="60" cy="60" r="18" fill="none" stroke="#4a7c59" stroke-width="2.5" opacity="0.6"/>
-        <circle cx="60" cy="60" r="10" fill="none" stroke="#4a7c59" stroke-width="3" opacity="0.85"/>
-        <circle cx="60" cy="60" r="4" fill="#4a7c59"/>
-      </svg>
+
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
+        <button class="lang-btn" onclick="setLang('ko')" id="btn-ko">KR</button>
     </div>
 
-    <h1>Iamcraft</h1>
-    <p class="tagline">나를 만드는 기술 · The craft of becoming</p>
+    <div class="container">
+        <!-- Title only, no logo -->
+        <h1>Iamcraft</h1>
+        <p class="tagline">
+            <span data-lang="en" class="show">The craft of becoming</span>
+            <span data-lang="ko">나를 만드는 기술</span>
+        </p>
 
-    <div class="app-card">
-      <div class="app-name">Core 1</div>
-      <div class="app-subtitle">날 잡아주는 습관 하나 · One habit that holds you steady</div>
-      <div class="app-desc">
-        한 번에 습관 하나. 씨앗을 심고, 매일 체크인하면 나무가 자라.
-        3일 빠지면 처음부터. 완성하면 다음 씨앗을 심어.
-      </div>
-      <span class="badge badge-soon">Coming Soon — Spring 2026</span>
+        <!-- Core 1 -->
+        <div class="app-card">
+            <div class="app-header">
+                <div class="app-icon">
+                    <img src="core1-icon.png" alt="Core 1">
+                </div>
+                <h2>Core 1</h2>
+            </div>
+            <p class="app-subtitle">
+                <span data-lang="en" class="show">One habit that holds you steady</span>
+                <span data-lang="ko">날 잡아주는 습관 하나</span>
+            </p>
+            <p class="app-desc">
+                <span data-lang="en" class="show">One habit at a time. Plant a seed, check in daily, and watch your tree grow. Miss 3 days and start over. Complete it, then plant the next.</span>
+                <span data-lang="ko">한 번에 습관 하나. 씨앗을 심고, 매일 체크인하면 나무가 자라. 3일 빠지면 처음부터. 완성하면 다음 씨앗을 심어.</span>
+            </p>
+            <a href="https://apps.apple.com/app/core-1/id0000000000" class="badge badge-live">
+                <span data-lang="en" class="show">Available on App Store</span>
+                <span data-lang="ko">App Store에서 보기</span>
+            </a>
+        </div>
+
+        <!-- 정적의 시간 -->
+        <div class="app-card">
+            <div class="app-header">
+                <div class="stillness-icon">
+                    <div class="stillness-icon-circle"></div>
+                </div>
+                <h2>
+                    <span data-lang="en" class="show">A Moment of Stillness</span>
+                    <span data-lang="ko">정적의 시간</span>
+                </h2>
+            </div>
+            <p class="app-subtitle">
+                <span data-lang="en" class="show">5 minutes. Just breathe.</span>
+                <span data-lang="ko">5분, 숨만 쉬세요</span>
+            </p>
+            <p class="app-desc">
+                <span data-lang="en" class="show">No voice, no music, no guidance. Just a breathing circle and silence. Set your rhythm, get gentle reminders, and track your daily stillness.</span>
+                <span data-lang="ko">목소리도, 음악도, 가이드도 없이. 숨쉬는 원 하나와 정적. 호흡 패턴을 설정하고, 알림을 받고, 매일의 기록을 달력에 남겨.</span>
+            </p>
+            <span class="badge badge-review">
+                <span data-lang="en" class="show">In Review — Coming Soon</span>
+                <span data-lang="ko">심사 중 — 곧 출시</span>
+            </span>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-links">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="mailto:support@iamcraft.co">Contact</a>
+            </div>
+            <p class="copyright">
+                © 2026 Iamcraft. All rights reserved.<br>
+                <a href="mailto:support@iamcraft.co">support@iamcraft.co</a>
+            </p>
+        </div>
     </div>
 
-    <div class="links">
-      <a href="/privacy">Privacy Policy</a>
-      <a href="/terms">Terms of Service</a>
-      <a href="mailto:support@iamcraft.co">Contact</a>
-    </div>
+    <script>
+        function setLang(lang) {
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                el.classList.toggle('show', el.dataset.lang === lang);
+            });
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.documentElement.lang = lang;
+            localStorage.setItem('iamcraft-lang', lang);
+        }
 
-    <div class="footer">
-      © 2026 Iamcraft. All rights reserved.<br>
-      <a href="mailto:support@iamcraft.co">support@iamcraft.co</a>
-    </div>
-  </div>
+        const saved = localStorage.getItem('iamcraft-lang');
+        if (saved) {
+            setLang(saved);
+        } else {
+            const isKo = navigator.language.startsWith('ko');
+            setLang(isKo ? 'ko' : 'en');
+        }
+    </script>
+
 </body>
 </html>

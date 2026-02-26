@@ -3,143 +3,314 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service — Iamcraft</title>
+    <title>Terms of Service | Iamcraft</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&family=Source+Serif+4:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap');
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: -apple-system, 'Helvetica Neue', Georgia, serif;
+            font-family: 'DM Sans', 'Noto Sans KR', sans-serif;
             background: #f5f0e8;
             color: #3d2e1e;
             line-height: 1.8;
-            padding: 48px 24px;
-            max-width: 640px;
-            margin: 0 auto;
         }
-        h1 { font-family: Georgia, serif; font-size: 24px; font-weight: 700; margin-bottom: 8px; }
-        .date { font-size: 13px; color: rgba(61,46,30,0.4); margin-bottom: 32px; }
-        h2 { font-size: 15px; font-weight: 600; margin-top: 28px; margin-bottom: 8px; }
-        p { font-size: 14px; color: rgba(61,46,30,0.7); margin-bottom: 12px; }
-        .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(61,46,30,0.08); font-size: 12px; color: rgba(61,46,30,0.3); }
-        .footer a { color: rgba(61,46,30,0.4); text-decoration: none; }
-        .lang-toggle { position: fixed; top: 20px; right: 24px; display: flex; gap: 4px; z-index: 100; }
-        .lang-btn { background: none; border: 1px solid rgba(61,46,30,0.12); border-radius: 14px; padding: 4px 12px; font-size: 11px; letter-spacing: 1px; color: rgba(61,46,30,0.35); cursor: pointer; transition: all 0.2s ease; font-family: -apple-system, sans-serif; }
-        .lang-btn.active { background: rgba(61,46,30,0.08); color: #3d2e1e; border-color: rgba(61,46,30,0.2); }
+
+        .header {
+            padding: 28px 24px;
+            border-bottom: 1px solid rgba(138,115,85,0.12);
+            position: sticky;
+            top: 0;
+            background: #f5f0e8;
+            z-index: 10;
+        }
+
+        .header-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header a {
+            font-family: 'Source Serif 4', serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #3d2e1e;
+            text-decoration: none;
+        }
+
+        .lang-toggle {
+            display: flex;
+            gap: 4px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 1px solid rgba(61,46,30,0.12);
+            border-radius: 14px;
+            padding: 4px 12px;
+            font-size: 11px;
+            letter-spacing: 1px;
+            color: rgba(61,46,30,0.35);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: rgba(61,46,30,0.08);
+            color: #3d2e1e;
+            border-color: rgba(61,46,30,0.25);
+        }
+
         [data-lang] { display: none; }
-        [data-lang].show { display: block; }
+        [data-lang].show { display: inline; }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+
+        h1 {
+            font-family: 'Source Serif 4', serif;
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #3d2e1e;
+        }
+
+        .date {
+            font-size: 13px;
+            color: #8b7355;
+            margin-bottom: 36px;
+        }
+
+        h2 {
+            font-family: 'Source Serif 4', serif;
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 36px;
+            margin-bottom: 12px;
+            color: #3d2e1e;
+        }
+
+        p {
+            font-size: 15px;
+            color: #5c4a3a;
+            margin-bottom: 14px;
+        }
+
+        .apps-covered {
+            background: rgba(255,255,255,0.5);
+            border: 1px solid rgba(138,115,85,0.1);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 28px;
+            font-size: 14px;
+            color: #5c4a3a;
+        }
+
+        .apps-covered strong {
+            color: #3d2e1e;
+        }
+
+        .caps {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(138,115,85,0.12);
+            text-align: center;
+        }
+
+        .footer a {
+            font-size: 12px;
+            color: #8b7355;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        .footer-copy {
+            font-size: 11px;
+            color: #a89880;
+            margin-top: 12px;
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 26px; }
+            .container { padding: 32px 18px 60px; }
+        }
     </style>
 </head>
 <body>
 
-<div class="lang-toggle">
-    <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
-    <button class="lang-btn" onclick="setLang('ko')" id="btn-ko">KR</button>
-</div>
+    <div class="header">
+        <div class="header-inner">
+            <a href="/">Iamcraft</a>
+            <div class="lang-toggle">
+                <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+                <button class="lang-btn" id="btn-ko" onclick="setLang('ko')">KR</button>
+            </div>
+        </div>
+    </div>
 
-<!-- ENGLISH -->
-<div data-lang="en" class="show">
-<h1>Terms of Service</h1>
-<p class="date">Effective Date: February 19, 2026</p>
+    <div class="container">
 
-<p>Welcome to Iamcraft. By downloading, installing, or using any of our applications — including <strong>Core 1</strong> and <strong>A Moment of Stillness</strong> — you agree to these Terms of Service ("Terms"). Please read them carefully.</p>
+        <h1>
+            <span data-lang="en" class="show">Terms of Service</span>
+            <span data-lang="ko">이용약관</span>
+        </h1>
+        <p class="date">
+            <span data-lang="en" class="show">Effective Date: February 16, 2026 · Last Updated: February 26, 2026</span>
+            <span data-lang="ko">시행일: 2026년 2월 16일 · 최종 수정일: 2026년 2월 26일</span>
+        </p>
 
-<h2>1. Acceptance of Terms</h2>
-<p>By accessing or using any Iamcraft application, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the apps.</p>
+        <div class="apps-covered">
+            <span data-lang="en" class="show"><strong>Applies to:</strong> Core 1, A Moment of Stillness (정적의 시간), A Sense of Moment (찰나의 감각)</span>
+            <span data-lang="ko"><strong>적용 대상:</strong> Core 1, 정적의 시간, 찰나의 감각</span>
+        </div>
 
-<h2>2. Description of Services</h2>
-<p>Core 1 is a habit-building application that helps users focus on one habit at a time.</p>
-<p>A Moment of Stillness is a 5-minute breathing timer application with customizable breathing patterns, daily reminders, and session tracking.</p>
-<p>Both apps store all data locally on your device. These apps do not provide medical, psychological, or health consultation, diagnosis, or treatment. Responsibility for any outcomes lies solely with the user.</p>
+        <p>
+            <span data-lang="en" class="show">These Terms of Service ("Terms") govern your use of the mobile applications published by Iamcraft ("we," "our," or "us"). By downloading, installing, or using any of our apps, you agree to these Terms.</span>
+            <span data-lang="ko">본 이용약관("약관")은 Iamcraft("회사")가 발행하는 모바일 애플리케이션 사용에 적용됩니다. 앱을 다운로드, 설치 또는 사용함으로써 본 약관에 동의하는 것으로 간주합니다.</span>
+        </p>
 
-<h2>3. Age Requirement</h2>
-<p>Our apps are intended for users aged 4 and older. By using our apps, you confirm that you meet this age requirement, or that a parent or guardian has consented to your use.</p>
+        <h2>
+            <span data-lang="en" class="show">1. Acceptance of Terms</span>
+            <span data-lang="ko">1. 약관의 동의</span>
+        </h2>
+        <p>
+            <span data-lang="en" class="show">By using our apps, you confirm that you have read, understood, and agree to be bound by these Terms. If you do not agree, please do not use our apps.</span>
+            <span data-lang="ko">앱을 사용함으로써 본 약관을 읽고 이해하였으며 이에 동의한 것으로 간주합니다. 동의하지 않는 경우 앱을 사용하지 마십시오.</span>
+        </p>
 
-<h2>4. User Responsibilities</h2>
-<p>You are responsible for maintaining the security of your device and any data stored within our apps. Since all data is stored locally, we cannot recover data if your device is lost, damaged, or an app is deleted.</p>
+        <h2>
+            <span data-lang="en" class="show">2. Description of Services</span>
+            <span data-lang="ko">2. 서비스 설명</span>
+        </h2>
+        <p>
+            <span data-lang="en" class="show"><strong>Core 1</strong> is a habit-building app that focuses on one habit at a time using a tree-growing metaphor.</span>
+            <span data-lang="ko"><strong>Core 1</strong>은 나무 성장 메타포를 활용하여 한 번에 하나의 습관에 집중하는 습관 형성 앱입니다.</span>
+        </p>
+        <p>
+            <span data-lang="en" class="show"><strong>A Moment of Stillness</strong> is a 5-minute breathing timer app with customizable breathing patterns and daily tracking.</span>
+            <span data-lang="ko"><strong>정적의 시간</strong>은 맞춤형 호흡 패턴과 일일 기록을 제공하는 5분 호흡 타이머 앱입니다.</span>
+        </p>
+        <p>
+            <span data-lang="en" class="show"><strong>A Sense of Moment</strong> is a color-based moment recording app that captures feelings through color selection and optional word input.</span>
+            <span data-lang="ko"><strong>찰나의 감각</strong>은 색상 선택과 선택적 단어 입력을 통해 순간의 감각을 기록하는 앱입니다.</span>
+        </p>
 
-<h2>5. Purchases and Payments</h2>
-<p>Our apps may offer in-app purchases processed through the Apple App Store. All payments are subject to Apple's terms and conditions. We do not process payments directly and do not have access to your payment information. Refund requests should be directed to Apple.</p>
+        <h2>
+            <span data-lang="en" class="show">3. User Eligibility</span>
+            <span data-lang="ko">3. 사용자 자격</span>
+        </h2>
+        <p>
+            <span data-lang="en" class="show">Our apps are intended for users aged 13 and older. By using our apps, you represent that you meet this age requirement.</span>
+            <span data-lang="ko">앱은 만 13세 이상 사용자를 대상으로 합니다. 앱을 사용함으로써 이 연령 요건을 충족함을 표명합니다.</span>
+        </p>
 
-<h2>6. Intellectual Property</h2>
-<p>All content, design, code, and trademarks within Iamcraft applications are the intellectual property of Iamcraft. You may not copy, modify, distribute, or create derivative works based on our apps without written permission.</p>
+        <h2>
+            <span data-lang="en" class="show">4. Data and Privacy</span>
+            <span data-lang="ko">4. 데이터 및 개인정보</span>
+        </h2>
+        <p>
+            <span data-lang="en" class="show">All data created within our apps is stored exclusively on your device. We do not collect, transmit, or store any user data on external servers. For full details, please refer to our <a href="/privacy" style="color:#4a7c59;">Privacy Policy</a>.</span>
+            <span data-lang="ko">앱 내 모든 데이터는 기기에만 저장됩니다. 사용자 데이터를 수집, 전송, 또는 외부 서버에 저장하지 않습니다. 자세한 내용은 <a href="/privacy" style="color:#4a7c59;">개인정보처리방침</a>을 참조하세요.</span>
+        </p>
 
-<h2>7. Disclaimer of Warranties</h2>
-<p>Our apps are provided "as is" without warranties of any kind, either express or implied. We do not warrant that our apps will be uninterrupted, error-free, or free of harmful components. Our apps are not a substitute for professional medical, psychological, or health advice. Use of our apps and any outcomes are entirely at the user's own risk. Iamcraft shall not be liable for any direct or indirect damages arising from the use of our apps.</p>
+        <h2>
+            <span data-lang="en" class="show">5. User Responsibilities</span>
+            <span data-lang="ko">5. 사용자 책임</span>
+        </h2>
+        <p>
+            <span data-lang="en" class="show">You are responsible for maintaining the security of your device and any data stored within our apps. Since data is stored locally, loss of data due to device damage, loss, or app deletion is not recoverable by us.</span>
+            <span data-lang="ko">기기의 보안과 앱 내 저장된 데이터의 관리는 사용자의 책임입니다. 데이터가 기기에만 저장되므로, 기기 손상, 분실 또는 앱 삭제로 인한 데이터 손실은 복구할 수 없습니다.</span>
+        </p>
 
-<h2>8. Limitation of Liability</h2>
-<p>To the maximum extent permitted by applicable law, Iamcraft shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use our apps.</p>
+        <h2>
+            <span data-lang="en" class="show">6. Disclaimers</span>
+            <span data-lang="ko">6. 면책 조항</span>
+        </h2>
+        <p>
+            <span data-lang="en" class="show">Our apps are provided "as is" without warranty of any kind, express or implied. Our apps are designed for personal wellness and self-reflection purposes. They do not provide medical advice, diagnosis, or treatment. Always consult with a qualified healthcare professional for medical concerns.</span>
+            <span data-lang="ko">앱은 명시적 또는 묵시적 보증 없이 "있는 그대로" 제공됩니다. 앱은 개인 웰빙 및 자기 성찰 목적으로 설계되었습니다. 의학적 조언, 진단 또는 치료를 제공하지 않습니다. 의학적 문제는 항상 전문 의료인과 상담하세요.</span>
+        </p>
 
-<h2>9. Governing Law</h2>
-<p>These Terms shall be governed by and construed in accordance with the laws of the State of Texas, United States, without regard to its conflict of law provisions.</p>
+        <h2>
+            <span data-lang="en" class="show">7. Limitation of Liability</span>
+            <span data-lang="ko">7. 책임 제한</span>
+        </h2>
+        <p class="caps">
+            <span data-lang="en" class="show">To the maximum extent permitted by applicable law, Iamcraft shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from your use of our apps.</span>
+            <span data-lang="ko">관련 법률이 허용하는 최대 범위 내에서, Iamcraft는 앱 사용으로 인한 간접적, 부수적, 특별, 결과적 또는 징벌적 손해, 직간접적 이익 또는 수익 손실, 데이터 손실, 사용 손실, 영업권 손실 등에 대해 책임을 지지 않습니다.</span>
+        </p>
 
-<h2>10. Changes to These Terms</h2>
-<p>We reserve the right to modify these Terms at any time. We will notify users of any material changes by updating the "Effective Date" above. Continued use of our apps after changes constitutes acceptance of the new Terms.</p>
+        <h2>
+            <span data-lang="en" class="show">8. Intellectual Property</span>
+            <span data-lang="ko">8. 지적재산권</span>
+        </h2>
+        <p>
+            <span data-lang="en" class="show">All content, features, and functionality of our apps, including but not limited to text, graphics, logos, icons, images, audio, software, and code, are the exclusive property of Iamcraft and are protected by international copyright, trademark, patent, and other intellectual property laws.</span>
+            <span data-lang="ko">텍스트, 그래픽, 로고, 아이콘, 이미지, 오디오, 소프트웨어, 코드 등 앱의 모든 콘텐츠, 기능 및 기능성은 Iamcraft의 독점 자산이며 국제 저작권, 상표, 특허 및 기타 지적재산권법에 의해 보호됩니다.</span>
+        </p>
 
-<h2>11. Contact Us</h2>
-<p>If you have any questions about these Terms, please contact us at: support@iamcraft.co</p>
-</div>
+        <h2>
+            <span data-lang="en" class="show">9. Governing Law</span>
+            <span data-lang="ko">9. 준거법</span>
+        </h2>
+        <p>
+            <span data-lang="en" class="show">These Terms shall be governed by and construed in accordance with the laws of the State of Texas, United States, without regard to its conflict of law provisions. Any disputes arising from these Terms or your use of our apps shall be resolved in the courts located in the State of Texas.</span>
+            <span data-lang="ko">본 약관은 법률 충돌 조항에 관계없이 미국 텍사스주 법률에 따라 규율되고 해석됩니다. 본 약관 또는 앱 사용으로 인한 분쟁은 텍사스주 법원에서 해결합니다.</span>
+        </p>
 
-<!-- KOREAN -->
-<div data-lang="ko">
-<h1>서비스 이용약관</h1>
-<p class="date">시행일: 2026년 2월 19일</p>
+        <h2>
+            <span data-lang="en" class="show">10. Changes to Terms</span>
+            <span data-lang="ko">10. 약관 변경</span>
+        </h2>
+        <p>
+            <span data-lang="en" class="show">We reserve the right to modify these Terms at any time. Changes will be reflected by updating the "Last Updated" date. Your continued use of our apps after changes constitutes acceptance of the modified Terms.</span>
+            <span data-lang="ko">회사는 언제든지 본 약관을 수정할 수 있습니다. 변경 사항은 "최종 수정일" 업데이트로 반영됩니다. 변경 후 앱을 계속 사용하면 수정된 약관에 동의하는 것으로 간주합니다.</span>
+        </p>
 
-<p>Iamcraft에 오신 것을 환영합니다. <strong>Core 1</strong> 및 <strong>정적의 시간</strong>을 포함한 당사의 애플리케이션을 다운로드, 설치 또는 사용함으로써 본 서비스 이용약관("약관")에 동의하게 됩니다. 주의 깊게 읽어주세요.</p>
+        <h2>
+            <span data-lang="en" class="show">11. Contact Us</span>
+            <span data-lang="ko">11. 문의</span>
+        </h2>
+        <p>
+            <span data-lang="en" class="show">If you have any questions about these Terms, please contact us at <a href="mailto:support@iamcraft.co" style="color:#4a7c59;">support@iamcraft.co</a></span>
+            <span data-lang="ko">본 약관에 대한 문의는 <a href="mailto:support@iamcraft.co" style="color:#4a7c59;">support@iamcraft.co</a>로 연락해 주세요.</span>
+        </p>
 
-<h2>1. 약관 동의</h2>
-<p>Iamcraft 애플리케이션에 접근하거나 사용함으로써 본 약관에 구속되는 것에 동의합니다. 본 약관에 동의하지 않으시면 앱을 사용하지 마세요.</p>
+        <div class="footer">
+            <div>
+                <a href="/">Home</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="mailto:support@iamcraft.co">Contact</a>
+            </div>
+            <p class="footer-copy">© 2026 Iamcraft. All rights reserved.</p>
+        </div>
 
-<h2>2. 서비스 설명</h2>
-<p>Core 1은 한 번에 하나의 습관에 집중하도록 돕는 습관 형성 애플리케이션입니다.</p>
-<p>정적의 시간은 맞춤형 호흡 패턴, 일일 알림, 세션 기록 기능을 갖춘 5분 호흡 타이머 애플리케이션입니다.</p>
-<p>두 앱 모두 모든 데이터를 기기에 로컬로 저장합니다. 이 앱들은 의료, 심리, 건강 상담, 진단 또는 치료를 제공하지 않습니다. 모든 결과에 대한 책임은 전적으로 사용자에게 있습니다.</p>
+    </div>
 
-<h2>3. 연령 요건</h2>
-<p>당사의 앱은 만 4세 이상의 사용자를 대상으로 합니다. 앱을 사용함으로써 이 연령 요건을 충족하거나 부모 또는 보호자의 동의를 받았음을 확인합니다.</p>
-
-<h2>4. 사용자 책임</h2>
-<p>귀하는 기기의 보안과 앱 내에 저장된 데이터를 유지할 책임이 있습니다. 모든 데이터가 로컬로 저장되므로, 기기를 분실하거나 손상되거나 앱을 삭제한 경우 데이터를 복구할 수 없습니다.</p>
-
-<h2>5. 구매 및 결제</h2>
-<p>당사의 앱은 Apple App Store를 통해 처리되는 인앱 구매를 제공할 수 있습니다. 모든 결제는 Apple의 이용약관에 따릅니다. 당사는 결제를 직접 처리하지 않으며 귀하의 결제 정보에 접근할 수 없습니다. 환불 요청은 Apple로 문의해 주세요.</p>
-
-<h2>6. 지적재산권</h2>
-<p>Iamcraft 애플리케이션 내의 모든 콘텐츠, 디자인, 코드 및 상표는 Iamcraft의 지적재산입니다. 서면 허가 없이 당사의 앱을 복사, 수정, 배포하거나 이를 기반으로 2차 저작물을 만들 수 없습니다.</p>
-
-<h2>7. 보증 면책</h2>
-<p>당사의 앱은 명시적이든 묵시적이든 어떠한 종류의 보증 없이 "있는 그대로" 제공됩니다. 당사는 앱이 중단 없이, 오류 없이 또는 유해한 구성 요소 없이 작동한다고 보증하지 않습니다. 당사의 앱은 전문적인 의료, 심리 또는 건강 조언을 대체하지 않습니다. 앱 사용 및 모든 결과는 전적으로 사용자의 책임입니다.</p>
-
-<h2>8. 책임 제한</h2>
-<p>관련 법률이 허용하는 최대 범위 내에서, Iamcraft는 앱 사용 또는 사용 불능으로 인한 간접적, 부수적, 특별, 결과적 또는 징벌적 손해에 대해 책임을 지지 않습니다.</p>
-
-<h2>9. 준거법</h2>
-<p>본 약관은 미국 텍사스주 법률에 의해 규율되고 해석되며, 법률 충돌 조항은 적용되지 않습니다.</p>
-
-<h2>10. 약관 변경</h2>
-<p>당사는 언제든지 본 약관을 수정할 권리를 보유합니다. 중대한 변경 시 위의 "시행일"을 업데이트하여 사용자에게 알립니다. 변경 후 앱을 계속 사용하면 새 약관에 동의한 것으로 간주됩니다.</p>
-
-<h2>11. 문의</h2>
-<p>본 약관에 관한 문의사항이 있으시면 support@iamcraft.co로 연락해 주세요.</p>
-</div>
-
-<div class="footer">
-    <p>© 2026 Iamcraft. All rights reserved.<br><a href="https://iamcraft.co">iamcraft.co</a></p>
-</div>
-
-<script>
-function setLang(lang) {
-    document.querySelectorAll('[data-lang]').forEach(el => {
-        el.classList.toggle('show', el.dataset.lang === lang);
-    });
-    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-    document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
-    document.documentElement.lang = lang === 'ko' ? 'ko' : 'en';
-    localStorage.setItem('iamcraft-lang', lang);
-}
-const saved = localStorage.getItem('iamcraft-lang');
-if (saved) { setLang(saved); } else {
-    setLang(navigator.language.startsWith('ko') ? 'ko' : 'en');
-}
-</script>
+    <script>
+        function setLang(lang) {
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                el.classList.toggle('show', el.dataset.lang === lang);
+            });
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+            document.documentElement.lang = lang;
+        }
+        const isKo = navigator.language.startsWith('ko');
+        setLang(isKo ? 'ko' : 'en');
+    </script>
 
 </body>
 </html>

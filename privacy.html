@@ -11,17 +11,17 @@
 
         body {
             font-family: 'DM Sans', 'Noto Sans KR', sans-serif;
-            background: #f5f0e8;
-            color: #3d2e1e;
+            background: #f5f1eb;
+            color: #2e2a25;
             line-height: 1.8;
         }
 
         .header {
             padding: 28px 24px;
-            border-bottom: 1px solid rgba(138,115,85,0.12);
+            border-bottom: 1px solid rgba(125,114,105,0.12);
             position: sticky;
             top: 0;
-            background: #f5f0e8;
+            background: #f5f1eb;
             z-index: 10;
         }
 
@@ -37,7 +37,7 @@
             font-family: 'Source Serif 4', serif;
             font-size: 18px;
             font-weight: 600;
-            color: #3d2e1e;
+            color: #2e2a25;
             text-decoration: none;
         }
 
@@ -48,20 +48,21 @@
 
         .lang-btn {
             background: none;
-            border: 1px solid rgba(61,46,30,0.12);
+            border: 1px solid rgba(46,42,37,0.1);
             border-radius: 14px;
             padding: 4px 12px;
             font-size: 11px;
             letter-spacing: 1px;
-            color: rgba(61,46,30,0.35);
+            color: rgba(46,42,37,0.35);
             cursor: pointer;
             transition: all 0.2s ease;
+            font-family: 'DM Sans', sans-serif;
         }
 
         .lang-btn.active {
-            background: rgba(61,46,30,0.08);
-            color: #3d2e1e;
-            border-color: rgba(61,46,30,0.25);
+            background: rgba(46,42,37,0.07);
+            color: #2e2a25;
+            border-color: rgba(46,42,37,0.2);
         }
 
         [data-lang] { display: none; }
@@ -80,12 +81,12 @@
             font-size: 32px;
             font-weight: 600;
             margin-bottom: 8px;
-            color: #3d2e1e;
+            color: #2e2a25;
         }
 
         .date {
             font-size: 13px;
-            color: #8b7355;
+            color: #7d7269;
             margin-bottom: 36px;
         }
 
@@ -95,7 +96,7 @@
             font-weight: 600;
             margin-top: 36px;
             margin-bottom: 12px;
-            color: #3d2e1e;
+            color: #2e2a25;
         }
 
         p {
@@ -105,8 +106,8 @@
         }
 
         .apps-covered {
-            background: rgba(255,255,255,0.5);
-            border: 1px solid rgba(138,115,85,0.1);
+            background: rgba(255,255,255,0.45);
+            border: 1px solid rgba(125,114,105,0.1);
             border-radius: 12px;
             padding: 16px 20px;
             margin-bottom: 28px;
@@ -115,26 +116,28 @@
         }
 
         .apps-covered strong {
-            color: #3d2e1e;
+            color: #2e2a25;
         }
 
         .footer {
             margin-top: 48px;
             padding-top: 24px;
-            border-top: 1px solid rgba(138,115,85,0.12);
+            border-top: 1px solid rgba(125,114,105,0.12);
             text-align: center;
         }
 
         .footer a {
             font-size: 12px;
-            color: #8b7355;
+            color: #7d7269;
             text-decoration: none;
             margin: 0 12px;
         }
 
+        .footer a:hover { color: #4a7c59; }
+
         .footer-copy {
             font-size: 11px;
-            color: #a89880;
+            color: #a09587;
             margin-top: 12px;
         }
 
@@ -163,13 +166,13 @@
             <span data-lang="ko">개인정보처리방침</span>
         </h1>
         <p class="date">
-            <span data-lang="en" class="show">Effective Date: February 16, 2026 · Last Updated: February 26, 2026</span>
-            <span data-lang="ko">시행일: 2026년 2월 16일 · 최종 수정일: 2026년 2월 26일</span>
+            <span data-lang="en" class="show">Effective Date: February 16, 2026 · Last Updated: February 27, 2026</span>
+            <span data-lang="ko">시행일: 2026년 2월 16일 · 최종 수정일: 2026년 2월 27일</span>
         </p>
 
         <div class="apps-covered">
-            <span data-lang="en" class="show"><strong>Applies to:</strong> Core 1, A Moment of Stillness (정적의 시간), A Sense of Moment (찰나의 감각), Screen Snap (각성 한방)</span>
-            <span data-lang="ko"><strong>적용 대상:</strong> Core 1, 정적의 시간, 찰나의 감각, 각성 한방</span>
+            <span data-lang="en" class="show"><strong>Applies to:</strong> Core 1, A Moment of Stillness (정적의 시간), Screen Snap (각성 한 방), A Sense of Moment (찰나의 감각)</span>
+            <span data-lang="ko"><strong>적용 대상:</strong> Core 1, 정적의 시간, 각성 한 방, 찰나의 감각</span>
         </div>
 
         <p>
@@ -203,13 +206,26 @@
             <span data-lang="ko"><strong>정적의 시간</strong> — 호흡 세션 기록, 패턴 설정, 달력 데이터는 기기에만 저장됩니다.</span>
         </p>
         <p>
+            <span data-lang="en" class="show"><strong>Screen Snap</strong> — Screen time awareness data, character affection levels, and notification preferences are stored locally on your device. The app uses on-device screen time APIs and does not transmit any usage data externally.</span>
+            <span data-lang="ko"><strong>각성 한 방</strong> — 스크린 타임 인식 데이터, 캐릭터 호감도, 알림 설정은 기기에만 저장됩니다. 앱은 기기 내 스크린 타임 API를 사용하며 어떤 사용 데이터도 외부로 전송하지 않습니다.</span>
+        </p>
+        <p>
             <span data-lang="en" class="show"><strong>A Sense of Moment</strong> — Color selections, optional words, and pattern data are stored locally on your device. If you use voice input, speech recognition is processed on-device and no audio data is transmitted externally.</span>
             <span data-lang="ko"><strong>찰나의 감각</strong> — 색상 선택, 단어 입력, 패턴 데이터는 기기에만 저장됩니다. 음성 입력 사용 시 음성 인식은 기기 내에서 처리되며 어떤 음성 데이터도 외부로 전송되지 않습니다.</span>
         </p>
 
         <h2>
-            <span data-lang="en" class="show">3. Data Storage</span>
-            <span data-lang="ko">3. 데이터 저장</span>
+            <span data-lang="en" class="show">3. Notifications</span>
+            <span data-lang="ko">3. 알림</span>
+        </h2>
+        <p>
+            <span data-lang="en" class="show">Some of our apps use local notifications to remind you of habits, breathing sessions, or screen time. These notifications are scheduled entirely on your device and do not involve any server communication.</span>
+            <span data-lang="ko">일부 앱은 습관, 호흡 세션, 스크린 타임을 알려주기 위해 로컬 알림을 사용합니다. 이 알림은 기기에서만 예약되며 서버 통신이 발생하지 않습니다.</span>
+        </p>
+
+        <h2>
+            <span data-lang="en" class="show">4. Data Storage</span>
+            <span data-lang="ko">4. 데이터 저장</span>
         </h2>
         <p>
             <span data-lang="en" class="show">All data is stored exclusively on your device. We do not operate servers that store user data. If you delete the app, all locally stored data will be permanently deleted.</span>
@@ -217,8 +233,8 @@
         </p>
 
         <h2>
-            <span data-lang="en" class="show">4. Third-Party Services</span>
-            <span data-lang="ko">4. 제3자 서비스</span>
+            <span data-lang="en" class="show">5. Third-Party Services</span>
+            <span data-lang="ko">5. 제3자 서비스</span>
         </h2>
         <p>
             <span data-lang="en" class="show">We do not use analytics tools, advertising networks, or any third-party services that collect user data. Payments are processed exclusively through the Apple App Store, and we do not have access to your payment information.</span>
@@ -226,8 +242,8 @@
         </p>
 
         <h2>
-            <span data-lang="en" class="show">5. Children's Privacy</span>
-            <span data-lang="ko">5. 아동 개인정보</span>
+            <span data-lang="en" class="show">6. Children's Privacy</span>
+            <span data-lang="ko">6. 아동 개인정보</span>
         </h2>
         <p>
             <span data-lang="en" class="show">Our apps are intended for users aged 13 and older. Our apps do not knowingly collect information from children under 13. Since the apps do not collect any personal information, no special data processing occurs for any age group.</span>
@@ -235,8 +251,8 @@
         </p>
 
         <h2>
-            <span data-lang="en" class="show">6. Your Rights</span>
-            <span data-lang="ko">6. 사용자 권리</span>
+            <span data-lang="en" class="show">7. Your Rights</span>
+            <span data-lang="ko">7. 사용자 권리</span>
         </h2>
         <p>
             <span data-lang="en" class="show">Since all data is stored locally on your device, you have complete control over your data at all times. You can delete all data by uninstalling the app.</span>
@@ -244,8 +260,8 @@
         </p>
 
         <h2>
-            <span data-lang="en" class="show">7. International Users</span>
-            <span data-lang="ko">7. 해외 사용자</span>
+            <span data-lang="en" class="show">8. International Users</span>
+            <span data-lang="ko">8. 해외 사용자</span>
         </h2>
         <p>
             <span data-lang="en" class="show">Our apps store all data locally on your device regardless of your location. No data crosses international borders as no data is transmitted from your device.</span>
@@ -253,8 +269,8 @@
         </p>
 
         <h2>
-            <span data-lang="en" class="show">8. Changes to This Policy</span>
-            <span data-lang="ko">8. 방침 변경</span>
+            <span data-lang="en" class="show">9. Changes to This Policy</span>
+            <span data-lang="ko">9. 방침 변경</span>
         </h2>
         <p>
             <span data-lang="en" class="show">We may update this Privacy Policy from time to time. Changes will be reflected by updating the "Last Updated" date. Your continued use of our apps after changes constitutes acceptance of the modified policy.</span>
@@ -262,8 +278,8 @@
         </p>
 
         <h2>
-            <span data-lang="en" class="show">9. Contact Us</span>
-            <span data-lang="ko">9. 문의</span>
+            <span data-lang="en" class="show">10. Contact Us</span>
+            <span data-lang="ko">10. 문의</span>
         </h2>
         <p>
             <span data-lang="en" class="show">If you have any questions about this Privacy Policy, please contact us at <a href="mailto:support@iamcraft.co" style="color:#4a7c59;">support@iamcraft.co</a></span>
@@ -276,21 +292,21 @@
                 <a href="/terms">Terms of Service</a>
                 <a href="mailto:support@iamcraft.co">Contact</a>
             </div>
-            <p class="footer-copy">© 2026 Iamcraft. All rights reserved.</p>
+            <p class="footer-copy">&copy; 2026 Iamcraft. All rights reserved.</p>
         </div>
 
     </div>
 
     <script>
         function setLang(lang) {
-            document.querySelectorAll('[data-lang]').forEach(el => {
+            document.querySelectorAll('[data-lang]').forEach(function(el) {
                 el.classList.toggle('show', el.dataset.lang === lang);
             });
             document.getElementById('btn-en').classList.toggle('active', lang === 'en');
             document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
             document.documentElement.lang = lang;
         }
-        const isKo = navigator.language.startsWith('ko');
+        var isKo = navigator.language.startsWith('ko');
         setLang(isKo ? 'ko' : 'en');
     </script>
 

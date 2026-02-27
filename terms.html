@@ -11,17 +11,17 @@
 
         body {
             font-family: 'DM Sans', 'Noto Sans KR', sans-serif;
-            background: #f5f0e8;
-            color: #3d2e1e;
+            background: #f5f1eb;
+            color: #2e2a25;
             line-height: 1.8;
         }
 
         .header {
             padding: 28px 24px;
-            border-bottom: 1px solid rgba(138,115,85,0.12);
+            border-bottom: 1px solid rgba(125,114,105,0.12);
             position: sticky;
             top: 0;
-            background: #f5f0e8;
+            background: #f5f1eb;
             z-index: 10;
         }
 
@@ -37,7 +37,7 @@
             font-family: 'Source Serif 4', serif;
             font-size: 18px;
             font-weight: 600;
-            color: #3d2e1e;
+            color: #2e2a25;
             text-decoration: none;
         }
 
@@ -48,20 +48,21 @@
 
         .lang-btn {
             background: none;
-            border: 1px solid rgba(61,46,30,0.12);
+            border: 1px solid rgba(46,42,37,0.1);
             border-radius: 14px;
             padding: 4px 12px;
             font-size: 11px;
             letter-spacing: 1px;
-            color: rgba(61,46,30,0.35);
+            color: rgba(46,42,37,0.35);
             cursor: pointer;
             transition: all 0.2s ease;
+            font-family: 'DM Sans', sans-serif;
         }
 
         .lang-btn.active {
-            background: rgba(61,46,30,0.08);
-            color: #3d2e1e;
-            border-color: rgba(61,46,30,0.25);
+            background: rgba(46,42,37,0.07);
+            color: #2e2a25;
+            border-color: rgba(46,42,37,0.2);
         }
 
         [data-lang] { display: none; }
@@ -78,12 +79,12 @@
             font-size: 32px;
             font-weight: 600;
             margin-bottom: 8px;
-            color: #3d2e1e;
+            color: #2e2a25;
         }
 
         .date {
             font-size: 13px;
-            color: #8b7355;
+            color: #7d7269;
             margin-bottom: 36px;
         }
 
@@ -93,7 +94,7 @@
             font-weight: 600;
             margin-top: 36px;
             margin-bottom: 12px;
-            color: #3d2e1e;
+            color: #2e2a25;
         }
 
         p {
@@ -103,8 +104,8 @@
         }
 
         .apps-covered {
-            background: rgba(255,255,255,0.5);
-            border: 1px solid rgba(138,115,85,0.1);
+            background: rgba(255,255,255,0.45);
+            border: 1px solid rgba(125,114,105,0.1);
             border-radius: 12px;
             padding: 16px 20px;
             margin-bottom: 28px;
@@ -113,7 +114,7 @@
         }
 
         .apps-covered strong {
-            color: #3d2e1e;
+            color: #2e2a25;
         }
 
         .caps {
@@ -125,20 +126,22 @@
         .footer {
             margin-top: 48px;
             padding-top: 24px;
-            border-top: 1px solid rgba(138,115,85,0.12);
+            border-top: 1px solid rgba(125,114,105,0.12);
             text-align: center;
         }
 
         .footer a {
             font-size: 12px;
-            color: #8b7355;
+            color: #7d7269;
             text-decoration: none;
             margin: 0 12px;
         }
 
+        .footer a:hover { color: #4a7c59; }
+
         .footer-copy {
             font-size: 11px;
-            color: #a89880;
+            color: #a09587;
             margin-top: 12px;
         }
 
@@ -167,13 +170,13 @@
             <span data-lang="ko">이용약관</span>
         </h1>
         <p class="date">
-            <span data-lang="en" class="show">Effective Date: February 16, 2026 · Last Updated: February 26, 2026</span>
-            <span data-lang="ko">시행일: 2026년 2월 16일 · 최종 수정일: 2026년 2월 26일</span>
+            <span data-lang="en" class="show">Effective Date: February 16, 2026 · Last Updated: February 27, 2026</span>
+            <span data-lang="ko">시행일: 2026년 2월 16일 · 최종 수정일: 2026년 2월 27일</span>
         </p>
 
         <div class="apps-covered">
-            <span data-lang="en" class="show"><strong>Applies to:</strong> Core 1, A Moment of Stillness (정적의 시간), A Sense of Moment (찰나의 감각), Screen Snap(각성 한방)</span>
-            <span data-lang="ko"><strong>적용 대상:</strong> Core 1, 정적의 시간, 찰나의 감각, 각성 한방</span>
+            <span data-lang="en" class="show"><strong>Applies to:</strong> Core 1, A Moment of Stillness (정적의 시간), Screen Snap (각성 한 방), A Sense of Moment (찰나의 감각)</span>
+            <span data-lang="ko"><strong>적용 대상:</strong> Core 1, 정적의 시간, 각성 한 방, 찰나의 감각</span>
         </div>
 
         <p>
@@ -201,6 +204,10 @@
         <p>
             <span data-lang="en" class="show"><strong>A Moment of Stillness</strong> is a 5-minute breathing timer app with customizable breathing patterns and daily tracking.</span>
             <span data-lang="ko"><strong>정적의 시간</strong>은 맞춤형 호흡 패턴과 일일 기록을 제공하는 5분 호흡 타이머 앱입니다.</span>
+        </p>
+        <p>
+            <span data-lang="en" class="show"><strong>Screen Snap</strong> is a screen time awareness app featuring an interactive cat character that reacts to your phone usage with escalating levels of sassiness and affection.</span>
+            <span data-lang="ko"><strong>각성 한 방</strong>은 스크린 타임에 반응하는 도도한 고양이 캐릭터를 통해 폰 사용 습관을 인식하게 해주는 앱입니다.</span>
         </p>
         <p>
             <span data-lang="en" class="show"><strong>A Sense of Moment</strong> is a color-based moment recording app that captures feelings through color selection and optional word input.</span>
@@ -294,21 +301,21 @@
                 <a href="/privacy">Privacy Policy</a>
                 <a href="mailto:support@iamcraft.co">Contact</a>
             </div>
-            <p class="footer-copy">© 2026 Iamcraft. All rights reserved.</p>
+            <p class="footer-copy">&copy; 2026 Iamcraft. All rights reserved.</p>
         </div>
 
     </div>
 
     <script>
         function setLang(lang) {
-            document.querySelectorAll('[data-lang]').forEach(el => {
+            document.querySelectorAll('[data-lang]').forEach(function(el) {
                 el.classList.toggle('show', el.dataset.lang === lang);
             });
             document.getElementById('btn-en').classList.toggle('active', lang === 'en');
             document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
             document.documentElement.lang = lang;
         }
-        const isKo = navigator.language.startsWith('ko');
+        var isKo = navigator.language.startsWith('ko');
         setLang(isKo ? 'ko' : 'en');
     </script>
 

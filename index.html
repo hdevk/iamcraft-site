@@ -81,11 +81,9 @@
 
     .lang-btn:hover { background: rgba(46,42,37,0.05); }
 
-    [data-lang] { display: none; }
-    [data-lang].show { display: inline; }
-    p[data-lang].show, div[data-lang].show, span[data-lang].show { display: block; }
-    a[data-lang].show { display: inline-block; }
-    img[data-lang].show { display: inline; }
+    [data-lang] { display: none !important; }
+    [data-lang].show { display: inline !important; }
+    .app-icon [data-lang].show { display: block !important; width: 100%; height: 100%; }
 
     .container {
       max-width: 640px;
@@ -358,7 +356,7 @@
   <div class="links animate animate-delay-6">
     <a href="/privacy">Privacy Policy</a>
     <a href="/terms">Terms of Service</a>
-    <a href="/cdn-cgi/l/email-protection#394a4c4949564b4d795058545a4b585f4d175a56">Contact</a>
+    <a href="mailto:support@iamcraft.co">Contact</a>
   </div>
 
   <div class="footer animate animate-delay-6">
@@ -373,11 +371,18 @@
 
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   function setLang(lang) {
     document.querySelectorAll('[data-lang]').forEach(function(el) {
       el.classList.toggle('show', el.dataset.lang === lang);
     });
     document.getElementById('btn-en').classList.toggle('active', lang === 'en');
     document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
-    
+    document.documentElement.lang = lang;
+  }
+  var isKo = navigator.language.startsWith('ko');
+  setLang(isKo ? 'ko' : 'en');
+</script>
+
+</body>
+</html>

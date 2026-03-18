@@ -41,10 +41,7 @@
             text-decoration: none;
         }
 
-        .lang-toggle {
-            display: flex;
-            gap: 4px;
-        }
+        .lang-toggle { display: flex; gap: 4px; }
 
         .lang-btn {
             background: none;
@@ -68,40 +65,12 @@
         [data-lang] { display: none; }
         [data-lang].show { display: inline; }
 
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 48px 24px 80px;
-        }
+        .container { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
 
-        h1 {
-            font-family: 'Source Serif 4', serif;
-            font-size: 32px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #2e2a25;
-        }
-
-        .date {
-            font-size: 13px;
-            color: #7d7269;
-            margin-bottom: 36px;
-        }
-
-        h2 {
-            font-family: 'Source Serif 4', serif;
-            font-size: 20px;
-            font-weight: 600;
-            margin-top: 36px;
-            margin-bottom: 12px;
-            color: #2e2a25;
-        }
-
-        p {
-            font-size: 15px;
-            color: #5c4a3a;
-            margin-bottom: 14px;
-        }
+        h1 { font-family: 'Source Serif 4', serif; font-size: 32px; font-weight: 600; margin-bottom: 8px; color: #2e2a25; }
+        .date { font-size: 13px; color: #7d7269; margin-bottom: 36px; }
+        h2 { font-family: 'Source Serif 4', serif; font-size: 20px; font-weight: 600; margin-top: 36px; margin-bottom: 12px; color: #2e2a25; }
+        p { font-size: 15px; color: #5c4a3a; margin-bottom: 14px; }
 
         .apps-covered {
             background: rgba(255,255,255,0.45);
@@ -112,47 +81,19 @@
             font-size: 14px;
             color: #5c4a3a;
         }
+        .apps-covered strong { color: #2e2a25; }
 
-        .apps-covered strong {
-            color: #2e2a25;
-        }
+        .caps { font-size: 13px; text-transform: uppercase; letter-spacing: 0.3px; }
 
-        .caps {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
-
-        .footer {
-            margin-top: 48px;
-            padding-top: 24px;
-            border-top: 1px solid rgba(125,114,105,0.12);
-            text-align: center;
-        }
-
-        .footer a {
-            font-size: 12px;
-            color: #7d7269;
-            text-decoration: none;
-            margin: 0 12px;
-        }
-
+        .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(125,114,105,0.12); text-align: center; }
+        .footer a { font-size: 12px; color: #7d7269; text-decoration: none; margin: 0 12px; }
         .footer a:hover { color: #4a7c59; }
+        .footer-copy { font-size: 11px; color: #a09587; margin-top: 12px; }
 
-        .footer-copy {
-            font-size: 11px;
-            color: #a09587;
-            margin-top: 12px;
-        }
-
-        @media (max-width: 480px) {
-            h1 { font-size: 26px; }
-            .container { padding: 32px 18px 60px; }
-        }
+        @media (max-width: 480px) { h1 { font-size: 26px; } .container { padding: 32px 18px 60px; } }
     </style>
 </head>
 <body>
-
     <div class="header">
         <div class="header-inner">
             <a href="/">Iamcraft</a>
@@ -164,19 +105,18 @@
     </div>
 
     <div class="container">
-
         <h1>
             <span data-lang="en" class="show">Terms of Service</span>
             <span data-lang="ko">이용약관</span>
         </h1>
         <p class="date">
-            <span data-lang="en" class="show">Effective Date: February 16, 2026 · Last Updated: February 27, 2026</span>
-            <span data-lang="ko">시행일: 2026년 2월 16일 · 최종 수정일: 2026년 2월 27일</span>
+            <span data-lang="en" class="show">Effective Date: February 16, 2026 · Last Updated: March 17, 2026</span>
+            <span data-lang="ko">시행일: 2026년 2월 16일 · 최종 수정일: 2026년 3월 17일</span>
         </p>
 
         <div class="apps-covered">
-            <span data-lang="en" class="show"><strong>Applies to:</strong> Core 1, A Moment of Stillness (정적의 시간), Screen Snap (각성 한 방), A Sense of Moment (찰나의 감각)</span>
-            <span data-lang="ko"><strong>적용 대상:</strong> Core 1, 정적의 시간, 각성 한 방, 찰나의 감각</span>
+            <span data-lang="en" class="show"><strong>Applies to:</strong> Core 1, A Moment of Stillness (정적의 시간), Punch Cat (각성 한 방), PawMic, The Sense of Moment (찰나의 감각)</span>
+            <span data-lang="ko"><strong>적용 대상:</strong> Core 1, 정적의 시간, 각성 한 방 (Punch Cat), PawMic, 찰나의 감각</span>
         </div>
 
         <p>
@@ -184,19 +124,13 @@
             <span data-lang="ko">본 이용약관("약관")은 Iamcraft("회사")가 발행하는 모바일 애플리케이션 사용에 적용됩니다. 앱을 다운로드, 설치 또는 사용함으로써 본 약관에 동의하는 것으로 간주합니다.</span>
         </p>
 
-        <h2>
-            <span data-lang="en" class="show">1. Acceptance of Terms</span>
-            <span data-lang="ko">1. 약관의 동의</span>
-        </h2>
+        <h2><span data-lang="en" class="show">1. Acceptance of Terms</span><span data-lang="ko">1. 약관의 동의</span></h2>
         <p>
             <span data-lang="en" class="show">By using our apps, you confirm that you have read, understood, and agree to be bound by these Terms. If you do not agree, please do not use our apps.</span>
             <span data-lang="ko">앱을 사용함으로써 본 약관을 읽고 이해하였으며 이에 동의한 것으로 간주합니다. 동의하지 않는 경우 앱을 사용하지 마십시오.</span>
         </p>
 
-        <h2>
-            <span data-lang="en" class="show">2. Description of Services</span>
-            <span data-lang="ko">2. 서비스 설명</span>
-        </h2>
+        <h2><span data-lang="en" class="show">2. Description of Services</span><span data-lang="ko">2. 서비스 설명</span></h2>
         <p>
             <span data-lang="en" class="show"><strong>Core 1</strong> is a habit-building app that focuses on one habit at a time using a tree-growing metaphor.</span>
             <span data-lang="ko"><strong>Core 1</strong>은 나무 성장 메타포를 활용하여 한 번에 하나의 습관에 집중하는 습관 형성 앱입니다.</span>
@@ -206,90 +140,67 @@
             <span data-lang="ko"><strong>정적의 시간</strong>은 맞춤형 호흡 패턴과 일일 기록을 제공하는 5분 호흡 타이머 앱입니다.</span>
         </p>
         <p>
-            <span data-lang="en" class="show"><strong>Screen Snap</strong> is a screen time awareness app featuring an interactive cat character that reacts to your phone usage with escalating levels of sassiness and affection.</span>
+            <span data-lang="en" class="show"><strong>Punch Cat</strong> is a screen time awareness app featuring an interactive cat character that reacts to your phone usage with escalating levels of sassiness and affection.</span>
             <span data-lang="ko"><strong>각성 한 방</strong>은 스크린 타임에 반응하는 도도한 고양이 캐릭터를 통해 폰 사용 습관을 인식하게 해주는 앱입니다.</span>
         </p>
         <p>
-            <span data-lang="en" class="show"><strong>A Sense of Moment</strong> is a color-based moment recording app that captures feelings through color selection and optional word input.</span>
+            <span data-lang="en" class="show"><strong>PawMic</strong> is a voice-first pet health diary that lets you record symptoms, vet visits, and daily observations through voice, with photo and video attachments.</span>
+            <span data-lang="ko"><strong>PawMic</strong>은 음성으로 증상, 병원 방문, 일상을 기록하고 사진·영상을 첨부할 수 있는 반려동물 건강 다이어리 앱입니다.</span>
+        </p>
+        <p>
+            <span data-lang="en" class="show"><strong>The Sense of Moment</strong> is a color-based moment recording app that captures feelings through color selection and optional word input.</span>
             <span data-lang="ko"><strong>찰나의 감각</strong>은 색상 선택과 선택적 단어 입력을 통해 순간의 감각을 기록하는 앱입니다.</span>
         </p>
 
-        <h2>
-            <span data-lang="en" class="show">3. User Eligibility</span>
-            <span data-lang="ko">3. 사용자 자격</span>
-        </h2>
+        <h2><span data-lang="en" class="show">3. User Eligibility</span><span data-lang="ko">3. 사용자 자격</span></h2>
         <p>
             <span data-lang="en" class="show">Our apps are intended for users aged 13 and older. By using our apps, you represent that you meet this age requirement.</span>
             <span data-lang="ko">앱은 만 13세 이상 사용자를 대상으로 합니다. 앱을 사용함으로써 이 연령 요건을 충족함을 표명합니다.</span>
         </p>
 
-        <h2>
-            <span data-lang="en" class="show">4. Data and Privacy</span>
-            <span data-lang="ko">4. 데이터 및 개인정보</span>
-        </h2>
+        <h2><span data-lang="en" class="show">4. Data and Privacy</span><span data-lang="ko">4. 데이터 및 개인정보</span></h2>
         <p>
             <span data-lang="en" class="show">All data created within our apps is stored exclusively on your device. We do not collect, transmit, or store any user data on external servers. For full details, please refer to our <a href="/privacy" style="color:#4a7c59;">Privacy Policy</a>.</span>
             <span data-lang="ko">앱 내 모든 데이터는 기기에만 저장됩니다. 사용자 데이터를 수집, 전송, 또는 외부 서버에 저장하지 않습니다. 자세한 내용은 <a href="/privacy" style="color:#4a7c59;">개인정보처리방침</a>을 참조하세요.</span>
         </p>
 
-        <h2>
-            <span data-lang="en" class="show">5. User Responsibilities</span>
-            <span data-lang="ko">5. 사용자 책임</span>
-        </h2>
+        <h2><span data-lang="en" class="show">5. User Responsibilities</span><span data-lang="ko">5. 사용자 책임</span></h2>
         <p>
             <span data-lang="en" class="show">You are responsible for maintaining the security of your device and any data stored within our apps. Since data is stored locally, loss of data due to device damage, loss, or app deletion is not recoverable by us.</span>
             <span data-lang="ko">기기의 보안과 앱 내 저장된 데이터의 관리는 사용자의 책임입니다. 데이터가 기기에만 저장되므로, 기기 손상, 분실 또는 앱 삭제로 인한 데이터 손실은 복구할 수 없습니다.</span>
         </p>
 
-        <h2>
-            <span data-lang="en" class="show">6. Disclaimers</span>
-            <span data-lang="ko">6. 면책 조항</span>
-        </h2>
+        <h2><span data-lang="en" class="show">6. Disclaimers</span><span data-lang="ko">6. 면책 조항</span></h2>
         <p>
             <span data-lang="en" class="show">Our apps are provided "as is" without warranty of any kind, express or implied. Our apps are designed for personal wellness and self-reflection purposes. They do not provide medical advice, diagnosis, or treatment. Always consult with a qualified healthcare professional for medical concerns.</span>
             <span data-lang="ko">앱은 명시적 또는 묵시적 보증 없이 "있는 그대로" 제공됩니다. 앱은 개인 웰빙 및 자기 성찰 목적으로 설계되었습니다. 의학적 조언, 진단 또는 치료를 제공하지 않습니다. 의학적 문제는 항상 전문 의료인과 상담하세요.</span>
         </p>
 
-        <h2>
-            <span data-lang="en" class="show">7. Limitation of Liability</span>
-            <span data-lang="ko">7. 책임 제한</span>
-        </h2>
+        <h2><span data-lang="en" class="show">7. Limitation of Liability</span><span data-lang="ko">7. 책임 제한</span></h2>
         <p class="caps">
             <span data-lang="en" class="show">To the maximum extent permitted by applicable law, Iamcraft shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from your use of our apps.</span>
             <span data-lang="ko">관련 법률이 허용하는 최대 범위 내에서, Iamcraft는 앱 사용으로 인한 간접적, 부수적, 특별, 결과적 또는 징벌적 손해, 직간접적 이익 또는 수익 손실, 데이터 손실, 사용 손실, 영업권 손실 등에 대해 책임을 지지 않습니다.</span>
         </p>
 
-        <h2>
-            <span data-lang="en" class="show">8. Intellectual Property</span>
-            <span data-lang="ko">8. 지적재산권</span>
-        </h2>
+        <h2><span data-lang="en" class="show">8. Intellectual Property</span><span data-lang="ko">8. 지적재산권</span></h2>
         <p>
             <span data-lang="en" class="show">All content, features, and functionality of our apps, including but not limited to text, graphics, logos, icons, images, audio, software, and code, are the exclusive property of Iamcraft and are protected by international copyright, trademark, patent, and other intellectual property laws.</span>
             <span data-lang="ko">텍스트, 그래픽, 로고, 아이콘, 이미지, 오디오, 소프트웨어, 코드 등 앱의 모든 콘텐츠, 기능 및 기능성은 Iamcraft의 독점 자산이며 국제 저작권, 상표, 특허 및 기타 지적재산권법에 의해 보호됩니다.</span>
         </p>
 
-        <h2>
-            <span data-lang="en" class="show">9. Governing Law</span>
-            <span data-lang="ko">9. 준거법</span>
-        </h2>
+        <h2><span data-lang="en" class="show">9. Governing Law</span><span data-lang="ko">9. 준거법</span></h2>
         <p>
             <span data-lang="en" class="show">These Terms shall be governed by and construed in accordance with the laws of the State of Texas, United States, without regard to its conflict of law provisions. Any disputes arising from these Terms or your use of our apps shall be resolved in the courts located in the State of Texas.</span>
             <span data-lang="ko">본 약관은 법률 충돌 조항에 관계없이 미국 텍사스주 법률에 따라 규율되고 해석됩니다. 본 약관 또는 앱 사용으로 인한 분쟁은 텍사스주 법원에서 해결합니다.</span>
         </p>
 
-        <h2>
-            <span data-lang="en" class="show">10. Changes to Terms</span>
-            <span data-lang="ko">10. 약관 변경</span>
-        </h2>
+        <h2><span data-lang="en" class="show">10. Changes to Terms</span><span data-lang="ko">10. 약관 변경</span></h2>
         <p>
             <span data-lang="en" class="show">We reserve the right to modify these Terms at any time. Changes will be reflected by updating the "Last Updated" date. Your continued use of our apps after changes constitutes acceptance of the modified Terms.</span>
             <span data-lang="ko">회사는 언제든지 본 약관을 수정할 수 있습니다. 변경 사항은 "최종 수정일" 업데이트로 반영됩니다. 변경 후 앱을 계속 사용하면 수정된 약관에 동의하는 것으로 간주합니다.</span>
         </p>
 
-        <h2>
-            <span data-lang="en" class="show">11. Contact Us</span>
-            <span data-lang="ko">11. 문의</span>
-        </h2>
+        <h2><span data-lang="en" class="show">11. Contact Us</span><span data-lang="ko">11. 문의</span></h2>
         <p>
             <span data-lang="en" class="show">If you have any questions about these Terms, please contact us at <a href="mailto:support@iamcraft.co" style="color:#4a7c59;">support@iamcraft.co</a></span>
             <span data-lang="ko">본 약관에 대한 문의는 <a href="mailto:support@iamcraft.co" style="color:#4a7c59;">support@iamcraft.co</a>로 연락해 주세요.</span>
@@ -303,7 +214,6 @@
             </div>
             <p class="footer-copy">&copy; 2026 Iamcraft. All rights reserved.</p>
         </div>
-
     </div>
 
     <script>
@@ -318,6 +228,7 @@
         var isKo = navigator.language.startsWith('ko');
         setLang(isKo ? 'ko' : 'en');
     </script>
-
 </body>
 </html>
+
+       

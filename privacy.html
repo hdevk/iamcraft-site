@@ -41,10 +41,7 @@
             text-decoration: none;
         }
 
-        .lang-toggle {
-            display: flex;
-            gap: 4px;
-        }
+        .lang-toggle { display: flex; gap: 4px; }
 
         .lang-btn {
             background: none;
@@ -67,43 +64,14 @@
 
         [data-lang] { display: none; }
         [data-lang].show { display: inline; }
-        p [data-lang].show, li [data-lang].show, h1 [data-lang].show, h2 [data-lang].show, h3 [data-lang].show { display: inline; }
-        .block[data-lang].show { display: block; }
+        p [data-lang].show, li [data-lang].show, h1 [data-lang].show, h2 [data-lang].show { display: inline; }
 
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 48px 24px 80px;
-        }
+        .container { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
 
-        h1 {
-            font-family: 'Source Serif 4', serif;
-            font-size: 32px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #2e2a25;
-        }
-
-        .date {
-            font-size: 13px;
-            color: #7d7269;
-            margin-bottom: 36px;
-        }
-
-        h2 {
-            font-family: 'Source Serif 4', serif;
-            font-size: 20px;
-            font-weight: 600;
-            margin-top: 36px;
-            margin-bottom: 12px;
-            color: #2e2a25;
-        }
-
-        p {
-            font-size: 15px;
-            color: #5c4a3a;
-            margin-bottom: 14px;
-        }
+        h1 { font-family: 'Source Serif 4', serif; font-size: 32px; font-weight: 600; margin-bottom: 8px; color: #2e2a25; }
+        .date { font-size: 13px; color: #7d7269; margin-bottom: 36px; }
+        h2 { font-family: 'Source Serif 4', serif; font-size: 20px; font-weight: 600; margin-top: 36px; margin-bottom: 12px; color: #2e2a25; }
+        p { font-size: 15px; color: #5c4a3a; margin-bottom: 14px; }
 
         .apps-covered {
             background: rgba(255,255,255,0.45);
@@ -114,41 +82,17 @@
             font-size: 14px;
             color: #5c4a3a;
         }
+        .apps-covered strong { color: #2e2a25; }
 
-        .apps-covered strong {
-            color: #2e2a25;
-        }
-
-        .footer {
-            margin-top: 48px;
-            padding-top: 24px;
-            border-top: 1px solid rgba(125,114,105,0.12);
-            text-align: center;
-        }
-
-        .footer a {
-            font-size: 12px;
-            color: #7d7269;
-            text-decoration: none;
-            margin: 0 12px;
-        }
-
+        .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(125,114,105,0.12); text-align: center; }
+        .footer a { font-size: 12px; color: #7d7269; text-decoration: none; margin: 0 12px; }
         .footer a:hover { color: #4a7c59; }
+        .footer-copy { font-size: 11px; color: #a09587; margin-top: 12px; }
 
-        .footer-copy {
-            font-size: 11px;
-            color: #a09587;
-            margin-top: 12px;
-        }
-
-        @media (max-width: 480px) {
-            h1 { font-size: 26px; }
-            .container { padding: 32px 18px 60px; }
-        }
+        @media (max-width: 480px) { h1 { font-size: 26px; } .container { padding: 32px 18px 60px; } }
     </style>
 </head>
 <body>
-
     <div class="header">
         <div class="header-inner">
             <a href="/">Iamcraft</a>
@@ -160,19 +104,18 @@
     </div>
 
     <div class="container">
-
         <h1>
             <span data-lang="en" class="show">Privacy Policy</span>
             <span data-lang="ko">개인정보처리방침</span>
         </h1>
         <p class="date">
-            <span data-lang="en" class="show">Effective Date: February 16, 2026 · Last Updated: February 27, 2026</span>
-            <span data-lang="ko">시행일: 2026년 2월 16일 · 최종 수정일: 2026년 2월 27일</span>
+            <span data-lang="en" class="show">Effective Date: February 16, 2026 · Last Updated: March 17, 2026</span>
+            <span data-lang="ko">시행일: 2026년 2월 16일 · 최종 수정일: 2026년 3월 17일</span>
         </p>
 
         <div class="apps-covered">
-            <span data-lang="en" class="show"><strong>Applies to:</strong> Core 1, A Moment of Stillness (정적의 시간), Screen Snap (각성 한 방), A Sense of Moment (찰나의 감각)</span>
-            <span data-lang="ko"><strong>적용 대상:</strong> Core 1, 정적의 시간, 각성 한 방, 찰나의 감각</span>
+            <span data-lang="en" class="show"><strong>Applies to:</strong> Core 1, A Moment of Stillness (정적의 시간), Punch Cat (각성 한 방), PawMic, The Sense of Moment (찰나의 감각)</span>
+            <span data-lang="ko"><strong>적용 대상:</strong> Core 1, 정적의 시간, 각성 한 방 (Punch Cat), PawMic, 찰나의 감각</span>
         </div>
 
         <p>
@@ -180,10 +123,7 @@
             <span data-lang="ko">Iamcraft("회사")는 모바일 애플리케이션을 운영합니다. 본 개인정보처리방침은 앱 사용 시 정보 처리 방식을 설명합니다.</span>
         </p>
 
-        <h2>
-            <span data-lang="en" class="show">1. Information We Collect</span>
-            <span data-lang="ko">1. 수집하는 정보</span>
-        </h2>
+        <h2><span data-lang="en" class="show">1. Information We Collect</span><span data-lang="ko">1. 수집하는 정보</span></h2>
         <p>
             <span data-lang="en" class="show">We do not collect any personal data. All data is stored locally on your device using the device's built-in storage. No data is transmitted to our servers or any third party.</span>
             <span data-lang="ko">우리는 어떠한 개인정보도 수집하지 않습니다. 모든 데이터는 기기의 내장 저장소를 통해 기기에만 저장됩니다. 어떤 데이터도 서버나 제3자에게 전송되지 않습니다.</span>
@@ -193,10 +133,7 @@
             <span data-lang="ko">구체적으로, 이름, 이메일, 위치정보, 건강정보, 사진, 연락처 등 어떠한 개인정보도 수집하지 않습니다.</span>
         </p>
 
-        <h2>
-            <span data-lang="en" class="show">2. App-Specific Data</span>
-            <span data-lang="ko">2. 앱별 데이터</span>
-        </h2>
+        <h2><span data-lang="en" class="show">2. App-Specific Data</span><span data-lang="ko">2. 앱별 데이터</span></h2>
         <p>
             <span data-lang="en" class="show"><strong>Core 1</strong> — Habit data, check-in records, tree names, and settings are stored locally on your device.</span>
             <span data-lang="ko"><strong>Core 1</strong> — 습관 데이터, 체크인 기록, 나무 이름, 설정은 기기에만 저장됩니다.</span>
@@ -206,81 +143,61 @@
             <span data-lang="ko"><strong>정적의 시간</strong> — 호흡 세션 기록, 패턴 설정, 달력 데이터는 기기에만 저장됩니다.</span>
         </p>
         <p>
-            <span data-lang="en" class="show"><strong>Screen Snap</strong> — Screen time awareness data, character affection levels, and notification preferences are stored locally on your device. The app uses on-device screen time APIs and does not transmit any usage data externally.</span>
+            <span data-lang="en" class="show"><strong>Punch Cat</strong> — Screen time awareness data, character affection levels, and notification preferences are stored locally on your device. The app uses on-device screen time APIs and does not transmit any usage data externally.</span>
             <span data-lang="ko"><strong>각성 한 방</strong> — 스크린 타임 인식 데이터, 캐릭터 호감도, 알림 설정은 기기에만 저장됩니다. 앱은 기기 내 스크린 타임 API를 사용하며 어떤 사용 데이터도 외부로 전송하지 않습니다.</span>
         </p>
         <p>
-            <span data-lang="en" class="show"><strong>A Sense of Moment</strong> — Color selections, optional words, and pattern data are stored locally on your device. If you use voice input, speech recognition is processed on-device and no audio data is transmitted externally.</span>
+            <span data-lang="en" class="show"><strong>PawMic</strong> — Voice recordings, photos, videos, pet profiles, and health diary entries are stored locally on your device. Voice recording and speech recognition are processed entirely on-device. No audio, image, or video data is transmitted externally.</span>
+            <span data-lang="ko"><strong>PawMic</strong> — 음성 녹음, 사진, 영상, 반려동물 프로필, 건강 일지 항목은 기기에만 저장됩니다. 음성 녹음 및 음성 인식은 기기 내에서만 처리됩니다. 어떤 음성, 이미지, 영상 데이터도 외부로 전송되지 않습니다.</span>
+        </p>
+        <p>
+            <span data-lang="en" class="show"><strong>The Sense of Moment</strong> — Color selections, optional words, and pattern data are stored locally on your device. If you use voice input, speech recognition is processed on-device and no audio data is transmitted externally.</span>
             <span data-lang="ko"><strong>찰나의 감각</strong> — 색상 선택, 단어 입력, 패턴 데이터는 기기에만 저장됩니다. 음성 입력 사용 시 음성 인식은 기기 내에서 처리되며 어떤 음성 데이터도 외부로 전송되지 않습니다.</span>
         </p>
 
-        <h2>
-            <span data-lang="en" class="show">3. Notifications</span>
-            <span data-lang="ko">3. 알림</span>
-        </h2>
+        <h2><span data-lang="en" class="show">3. Notifications</span><span data-lang="ko">3. 알림</span></h2>
         <p>
             <span data-lang="en" class="show">Some of our apps use local notifications to remind you of habits, breathing sessions, or screen time. These notifications are scheduled entirely on your device and do not involve any server communication.</span>
             <span data-lang="ko">일부 앱은 습관, 호흡 세션, 스크린 타임을 알려주기 위해 로컬 알림을 사용합니다. 이 알림은 기기에서만 예약되며 서버 통신이 발생하지 않습니다.</span>
         </p>
 
-        <h2>
-            <span data-lang="en" class="show">4. Data Storage</span>
-            <span data-lang="ko">4. 데이터 저장</span>
-        </h2>
+        <h2><span data-lang="en" class="show">4. Data Storage</span><span data-lang="ko">4. 데이터 저장</span></h2>
         <p>
             <span data-lang="en" class="show">All data is stored exclusively on your device. We do not operate servers that store user data. If you delete the app, all locally stored data will be permanently deleted.</span>
             <span data-lang="ko">모든 데이터는 기기에만 저장됩니다. 사용자 데이터를 저장하는 서버를 운영하지 않습니다. 앱을 삭제하면 모든 데이터가 영구 삭제됩니다.</span>
         </p>
 
-        <h2>
-            <span data-lang="en" class="show">5. Third-Party Services</span>
-            <span data-lang="ko">5. 제3자 서비스</span>
-        </h2>
+        <h2><span data-lang="en" class="show">5. Third-Party Services</span><span data-lang="ko">5. 제3자 서비스</span></h2>
         <p>
             <span data-lang="en" class="show">We do not use analytics tools, advertising networks, or any third-party services that collect user data. Payments are processed exclusively through the Apple App Store, and we do not have access to your payment information.</span>
             <span data-lang="ko">분석 도구, 광고 네트워크 등 사용자 데이터를 수집하는 제3자 서비스를 사용하지 않습니다. 결제는 Apple App Store를 통해서만 처리되며, 결제 정보에 접근하지 않습니다.</span>
         </p>
 
-        <h2>
-            <span data-lang="en" class="show">6. Children's Privacy</span>
-            <span data-lang="ko">6. 아동 개인정보</span>
-        </h2>
+        <h2><span data-lang="en" class="show">6. Children's Privacy</span><span data-lang="ko">6. 아동 개인정보</span></h2>
         <p>
             <span data-lang="en" class="show">Our apps are intended for users aged 13 and older. Our apps do not knowingly collect information from children under 13. Since the apps do not collect any personal information, no special data processing occurs for any age group.</span>
             <span data-lang="ko">앱은 만 13세 이상 사용자를 대상으로 합니다. 만 13세 미만 아동의 정보를 의도적으로 수집하지 않습니다. 앱이 개인정보를 수집하지 않으므로 어떤 연령대에도 별도의 데이터 처리가 발생하지 않습니다.</span>
         </p>
 
-        <h2>
-            <span data-lang="en" class="show">7. Your Rights</span>
-            <span data-lang="ko">7. 사용자 권리</span>
-        </h2>
+        <h2><span data-lang="en" class="show">7. Your Rights</span><span data-lang="ko">7. 사용자 권리</span></h2>
         <p>
             <span data-lang="en" class="show">Since all data is stored locally on your device, you have complete control over your data at all times. You can delete all data by uninstalling the app.</span>
             <span data-lang="ko">모든 데이터가 기기에만 저장되므로, 사용자가 항상 데이터를 완전히 제어합니다. 앱을 삭제하면 모든 데이터를 삭제할 수 있습니다.</span>
         </p>
 
-        <h2>
-            <span data-lang="en" class="show">8. International Users</span>
-            <span data-lang="ko">8. 해외 사용자</span>
-        </h2>
+        <h2><span data-lang="en" class="show">8. International Users</span><span data-lang="ko">8. 해외 사용자</span></h2>
         <p>
             <span data-lang="en" class="show">Our apps store all data locally on your device regardless of your location. No data crosses international borders as no data is transmitted from your device.</span>
             <span data-lang="ko">앱은 위치와 관계없이 모든 데이터를 기기에만 저장합니다. 데이터가 기기에서 전송되지 않으므로 국경 간 데이터 이동이 발생하지 않습니다.</span>
         </p>
 
-        <h2>
-            <span data-lang="en" class="show">9. Changes to This Policy</span>
-            <span data-lang="ko">9. 방침 변경</span>
-        </h2>
+        <h2><span data-lang="en" class="show">9. Changes to This Policy</span><span data-lang="ko">9. 방침 변경</span></h2>
         <p>
             <span data-lang="en" class="show">We may update this Privacy Policy from time to time. Changes will be reflected by updating the "Last Updated" date. Your continued use of our apps after changes constitutes acceptance of the modified policy.</span>
             <span data-lang="ko">본 방침은 수시로 업데이트될 수 있습니다. 변경 사항은 "최종 수정일" 업데이트로 반영됩니다. 변경 후 앱을 계속 사용하면 수정된 방침에 동의하는 것으로 간주합니다.</span>
         </p>
 
-        <h2>
-            <span data-lang="en" class="show">10. Contact Us</span>
-            <span data-lang="ko">10. 문의</span>
-        </h2>
+        <h2><span data-lang="en" class="show">10. Contact Us</span><span data-lang="ko">10. 문의</span></h2>
         <p>
             <span data-lang="en" class="show">If you have any questions about this Privacy Policy, please contact us at <a href="mailto:support@iamcraft.co" style="color:#4a7c59;">support@iamcraft.co</a></span>
             <span data-lang="ko">본 방침에 대한 문의는 <a href="mailto:support@iamcraft.co" style="color:#4a7c59;">support@iamcraft.co</a>로 연락해 주세요.</span>
@@ -294,7 +211,6 @@
             </div>
             <p class="footer-copy">&copy; 2026 Iamcraft. All rights reserved.</p>
         </div>
-
     </div>
 
     <script>
@@ -309,6 +225,5 @@
         var isKo = navigator.language.startsWith('ko');
         setLang(isKo ? 'ko' : 'en');
     </script>
-
 </body>
 </html>

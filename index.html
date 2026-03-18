@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Iamcraft — The craft of becoming</title>
-  <meta name="description" content="Iamcraft builds apps that help you craft who you are. Four apps, one philosophy: meet yourself.">
+  <meta name="description" content="Iamcraft builds apps that help you craft who you are. Five apps, one philosophy: meet yourself.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
@@ -50,6 +50,7 @@
     .animate-delay-4 { animation-delay: 0.6s; }
     .animate-delay-5 { animation-delay: 0.75s; }
     .animate-delay-6 { animation-delay: 0.9s; }
+    .animate-delay-7 { animation-delay: 1.05s; }
 
     .lang-toggle {
       position: fixed;
@@ -83,7 +84,6 @@
 
     [data-lang] { display: none !important; }
     [data-lang].show { display: inline !important; }
-    .app-icon [data-lang].show { display: block !important; width: 100%; height: 100%; }
 
     .container {
       max-width: 640px;
@@ -193,6 +193,7 @@
     .badge-live { background: rgba(74,124,89,0.1); color: #4a7c59; }
     .badge-live:hover { background: rgba(74,124,89,0.18); }
     .badge-review { background: rgba(232,168,23,0.1); color: #b88a10; }
+    .badge-soon { background: rgba(160,149,135,0.12); color: var(--muted); }
 
     .links {
       display: flex;
@@ -251,6 +252,7 @@
 
   <div class="apps">
 
+    <!-- Core 1 -->
     <div class="app-card animate animate-delay-2">
       <div class="app-header">
         <div class="app-icon">
@@ -274,6 +276,7 @@
       </a>
     </div>
 
+    <!-- A Moment of Stillness -->
     <div class="app-card animate animate-delay-3">
       <div class="app-header">
         <div class="app-icon">
@@ -300,20 +303,20 @@
       </a>
     </div>
 
+    <!-- Punch Cat / 각성 한 방 -->
     <div class="app-card animate animate-delay-4">
       <div class="app-header">
         <div class="app-icon">
-          <img data-lang="en" class="show" src="screensnap-icon.png" alt="Screen Snap">
-          <img data-lang="ko" src="screensnap-icon-kr.png" alt="각성 한 방">
+          <img src="punchcat-icon.png" alt="Punch Cat">
         </div>
         <div>
           <div class="app-name">
-            <span data-lang="en" class="show">Screen Snap</span>
+            <span data-lang="en" class="show">Punch Cat</span>
             <span data-lang="ko">각성 한 방</span>
           </div>
           <div class="app-name-kr">
             <span data-lang="en" class="show">A sassy cat's screen time wake-up call</span>
-            <span data-lang="ko">각성 한 방 — 도도한 고양이의 폰 내려놓기 잔소리</span>
+            <span data-lang="ko">도도한 고양이의 폰 내려놓기 잔소리</span>
           </div>
         </div>
       </div>
@@ -325,17 +328,45 @@
         <span data-lang="en" class="show">"Just one more is a lie and you know it."</span>
         <span data-lang="ko">"하나만 더는 거짓말이잖아."</span>
       </div>
-      <span class="badge badge-review">Coming Soon</span>
+      <span class="badge badge-soon">
+        <span data-lang="en" class="show">Coming Soon</span>
+        <span data-lang="ko">출시 준비 중</span>
+      </span>
     </div>
 
+    <!-- PawMic -->
     <div class="app-card animate animate-delay-5">
       <div class="app-header">
         <div class="app-icon">
-          <img src="chalna-icon.png" alt="Chalna">
+          <img src="pawmic-icon.png" alt="PawMic">
+        </div>
+        <div>
+          <div class="app-name">PawMic</div>
+          <div class="app-name-kr">
+            <span data-lang="en" class="show">Speak. Record. Understand your pet.</span>
+            <span data-lang="ko">말하고. 기록하고. 내 아이를 이해하고.</span>
+          </div>
+        </div>
+      </div>
+      <div class="app-desc">
+        <span data-lang="en" class="show">Voice-first pet health diary. Speak to record symptoms, vet visits, and daily observations. Photos and videos attach to every entry. Your pet's story, always in your hands.</span>
+        <span data-lang="ko">음성으로 기록하는 반려동물 건강 다이어리. 증상, 병원 방문, 일상을 말로 남기고, 사진과 영상을 함께 첨부해. 내 아이의 이야기, 항상 내 손안에.</span>
+      </div>
+      <span class="badge badge-review">
+        <span data-lang="en" class="show">Under Review</span>
+        <span data-lang="ko">심사 중</span>
+      </span>
+    </div>
+
+    <!-- The Sense of Moment / 찰나의 감각 -->
+    <div class="app-card animate animate-delay-6">
+      <div class="app-header">
+        <div class="app-icon">
+          <img src="chalna-icon.png" alt="The Sense of Moment">
         </div>
         <div>
           <div class="app-name">
-            <span data-lang="en" class="show">Chalna</span>
+            <span data-lang="en" class="show">The Sense of Moment</span>
             <span data-lang="ko">찰나의 감각</span>
           </div>
           <div class="app-name-kr">
@@ -348,18 +379,21 @@
         <span data-lang="en" class="show">Pick one color that matches how you feel right now. Add a word if you want. Do it again tomorrow. A year from now, you'll see yourself in the patterns.</span>
         <span data-lang="ko">지금 기분에 맞는 색 하나를 골라. 단어를 더해도 좋아. 내일 또 해봐. 1년 뒤, 패턴 속에서 나를 발견하게 될 거야.</span>
       </div>
-      <span class="badge badge-review">Coming Soon</span>
+      <span class="badge badge-review">
+        <span data-lang="en" class="show">Under Review</span>
+        <span data-lang="ko">심사 중</span>
+      </span>
     </div>
 
   </div>
 
-  <div class="links animate animate-delay-6">
+  <div class="links animate animate-delay-7">
     <a href="/privacy">Privacy Policy</a>
     <a href="/terms">Terms of Service</a>
     <a href="mailto:support@iamcraft.co">Contact</a>
   </div>
 
-  <div class="footer animate animate-delay-6">
+  <div class="footer animate animate-delay-7">
     <p>
       <span data-lang="en" class="show">All data stays on your device. No servers. No tracking. Just you.</span>
       <span data-lang="ko">모든 데이터는 기기에만 저장됩니다. 서버 없음. 추적 없음. 당신만.</span>

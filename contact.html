@@ -3,17 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support | Iamcraft</title>
-
+  <title>Contact | Iamcraft</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+    :root {
+      --bg: #f5f1eb;
+      --text: #2e2a25;
+      --muted: #7d7269;
+      --subtle: #a09587;
+      --accent: #4a7c59;
+      --card-bg: rgba(255,255,255,0.45);
+      --card-border: rgba(125,114,105,0.1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: 'DM Sans', 'Noto Sans KR', sans-serif;
-      background: #f5f1eb;
-      color: #2e2a25;
-      line-height: 1.8;
-      padding: 40px;
-      text-align: center;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
     }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      pointer-events: none;
+      opacity: 0.02;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      z-index: 9999;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate { opacity: 0; animation: fadeUp 0.8s ease forwards; }
+    .animate-delay-1 { animation-delay: 0.15s; }
+    .animate-delay-2 { animation-delay: 0.3s; }
 
     .lang-toggle {
       position: fixed;
@@ -21,6 +51,7 @@
       right: 24px;
       display: flex;
       gap: 4px;
+      z-index: 100;
     }
 
     .lang-btn {
@@ -29,32 +60,149 @@
       border-radius: 14px;
       padding: 4px 12px;
       font-size: 11px;
+      letter-spacing: 1px;
       color: rgba(46,42,37,0.35);
       cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: 'DM Sans', sans-serif;
     }
 
     .lang-btn.active {
       background: rgba(46,42,37,0.07);
-      color: #2e2a25;
+      color: var(--text);
+      border-color: rgba(46,42,37,0.2);
     }
 
-    [data-lang] { display: none; }
-    [data-lang].show { display: inline; }
+    .lang-btn:hover { background: rgba(46,42,37,0.05); }
 
-    h1 {
-      font-family: 'Source Serif 4', serif;
-      font-size: 32px;
-      margin-bottom: 20px;
+    [data-lang] { display: none !important; }
+    [data-lang].show { display: inline !important; }
+
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 64px 24px 80px;
     }
 
-    p {
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      margin-bottom: 40px;
+      transition: color 0.2s;
+    }
+
+    .back:hover { color: var(--accent); }
+
+    .page-title {
+      font-family: 'Source Serif 4', 'Noto Serif KR', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -1px;
+      margin-bottom: 8px;
+    }
+
+    .page-sub {
       font-size: 15px;
-      color: #5c4a3a;
+      color: var(--muted);
+      margin-bottom: 48px;
+      line-height: 1.6;
+    }
+
+    .section {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: 20px;
+      padding: 28px 24px;
+      margin-bottom: 16px;
+    }
+
+    .section h2 {
+      font-family: 'Source Serif 4', 'Noto Serif KR', serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text);
       margin-bottom: 12px;
+    }
+
+    .section p {
+      font-size: 14px;
+      color: #5c4a3a;
+      line-height: 1.8;
+      margin-bottom: 10px;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    .email-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(74,124,89,0.08);
+      border: 1px solid rgba(74,124,89,0.2);
+      border-radius: 12px;
+      padding: 12px 20px;
+      margin-top: 4px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .email-link:hover {
+      background: rgba(74,124,89,0.14);
+      transform: translateY(-1px);
+    }
+
+    .response-time {
+      font-size: 12px;
+      color: var(--subtle);
+      margin-top: 12px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 48px;
+      padding-bottom: 32px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--accent); }
+
+    .footer p {
+      font-size: 12px;
+      color: var(--subtle);
+    }
+
+    .footer a { color: var(--muted); text-decoration: none; }
+    .footer a:hover { color: var(--accent); }
+
+    @media (max-width: 480px) {
+      .container { padding: 48px 18px 48px; }
+      .page-title { font-size: 28px; }
+      .section { padding: 22px 18px; }
     }
   </style>
 </head>
-
 <body>
 
 <div class="lang-toggle">
@@ -62,30 +210,85 @@
   <button class="lang-btn" onclick="setLang('ko')" id="btn-ko">KR</button>
 </div>
 
-<h1>
-  <span data-lang="en" class="show">Support</span>
-  <span data-lang="ko">고객지원</span>
-</h1>
+<div class="container">
 
-<p>
-  <span data-lang="en" class="show">If you have any questions or need support, please contact us:</span>
-  <span data-lang="ko">문의사항이나 도움이 필요하시면 아래로 연락해 주세요:</span>
-</p>
+  <a href="/" class="back animate">← Iamcraft</a>
 
-<p>
-  <strong>Email:</strong>
-  <a href="mailto:support@iamcraft.co">support@iamcraft.co</a>
-</p>
+  <div class="animate animate-delay-1">
+    <div class="page-title">
+      <span data-lang="en" class="show">Contact</span>
+      <span data-lang="ko">문의</span>
+    </div>
+    <div class="page-sub">
+      <span data-lang="en" class="show">Questions, feedback, or just want to say hi — we'd love to hear from you.</span>
+      <span data-lang="ko">질문, 피드백, 또는 그냥 인사라도 — 언제든지 연락해 주세요.</span>
+    </div>
+  </div>
 
-<p>
-  <span data-lang="en" class="show">We typically respond within 24–48 hours.</span>
-  <span data-lang="ko">보통 24–48시간 이내에 답변드립니다.</span>
-</p>
+  <div class="animate animate-delay-2">
 
-<p>
-  <span data-lang="en" class="show">Please include your app name and device details when contacting us.</span>
-  <span data-lang="ko">문의 시 사용 중인 앱 이름과 기기 정보를 함께 알려주세요.</span>
-</p>
+    <div class="section">
+      <h2>
+        <span data-lang="en" class="show">Get in touch</span>
+        <span data-lang="ko">연락하기</span>
+      </h2>
+      <p>
+        <span data-lang="en" class="show">For support, feedback, or general inquiries:</span>
+        <span data-lang="ko">지원 요청, 피드백, 일반 문의:</span>
+      </p>
+      <a href="mailto:support@iamcraft.co" class="email-link">
+        ✉ support@iamcraft.co
+      </a>
+      <p class="response-time">
+        <span data-lang="en" class="show">We typically respond within 24–48 hours.</span>
+        <span data-lang="ko">보통 24–48시간 이내에 답변드립니다.</span>
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>
+        <span data-lang="en" class="show">When contacting support</span>
+        <span data-lang="ko">문의 시 도움이 되는 정보</span>
+      </h2>
+      <p>
+        <span data-lang="en" class="show">To help us assist you faster, please include:</span>
+        <span data-lang="ko">빠른 답변을 위해 아래 정보를 함께 보내주시면 도움이 됩니다:</span>
+      </p>
+      <p>
+        <span data-lang="en" class="show">· The name of the app you're writing about<br>· Your device model and iOS version<br>· A brief description of the issue or question</span>
+        <span data-lang="ko">· 문의하시는 앱 이름<br>· 기기 모델 및 iOS 버전<br>· 문의 내용에 대한 간단한 설명</span>
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>
+        <span data-lang="en" class="show">Our apps</span>
+        <span data-lang="ko">Iamcraft 앱</span>
+      </h2>
+      <p>
+        <span data-lang="en" class="show">Core 1 · A Moment of Stillness · Punch Cat · PawMic · The Sense of Moment · 5 Second Miracle</span>
+        <span data-lang="ko">Core 1 · 정적의 시간 · 각성 한 방 · PawMic · 찰나의 감각 · 5초의 기적</span>
+      </p>
+      <p style="margin-top: 8px;">
+        <a href="/" style="color: var(--accent); text-decoration: none; font-size: 13px;">
+          <span data-lang="en" class="show">← View all apps</span>
+          <span data-lang="ko">← 앱 전체 보기</span>
+        </a>
+      </p>
+    </div>
+
+  </div>
+
+  <div class="footer animate animate-delay-2">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms of Service</a>
+    </div>
+    <p>&copy; 2026 <a href="/">Iamcraft</a></p>
+  </div>
+
+</div>
 
 <script>
   function setLang(lang) {

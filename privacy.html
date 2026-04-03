@@ -62,9 +62,8 @@
             border-color: rgba(46,42,37,0.2);
         }
 
-        [data-lang] { display: none; }
-        [data-lang].show { display: inline; }
-        p [data-lang].show, li [data-lang].show, h1 [data-lang].show, h2 [data-lang].show { display: inline; }
+        [data-lang] { display: none !important; }
+        [data-lang].show { display: inline !important; }
 
         .container { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
 
@@ -204,7 +203,7 @@
         <h2><span data-lang="en" class="show">10. Contact Us</span><span data-lang="ko">10. 문의</span></h2>
         <p>
             <span data-lang="en" class="show">If you have any questions about this Privacy Policy, please contact us at <a href="/cdn-cgi/l/email-protection#21525451514e53556148404c42534047550f424e" style="color:#4a7c59;"><span class="__cf_email__" data-cfemail="e99a9c9999869b9da98088848a9b888f9dc78a86">[email&#160;protected]</span></a></span>
-            <span data-lang="ko">본 방침에 대한 문의는 <a href="/cdn-cgi/l/email-protection#087b7d7878677a7c486169656b7a696e7c266b67" style="color:#4a7c59;"><span class="__cf_email__" data-cfemail="d9aaaca9a9b6abad99b0b8b4baabb8bfadf7bab6"> support@iamcraft.co </span></a>로 연락해 주세요.</span>
+            <span data-lang="ko">본 방침에 대한 문의는 <a href="/cdn-cgi/l/email-protection#087b7d7878677a7c486169656b7a696e7c266b67" style="color:#4a7c59;"><span class="__cf_email__" data-cfemail="d9aaaca9a9b6abad99b0b8b4baabb8bfadf7bab6">[email&#160;protected]</span></a>로 연락해 주세요.</span>
         </p>
 
         <div class="footer">
@@ -218,6 +217,15 @@
     </div>
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Build email to avoid Cloudflare obfuscation
+        (function() {
+            var u = 'support', d = 'iamcraft.co';
+            var el = document.getElementById('contact-email-privacy');
+            if (el) {
+                el.innerHTML = '<a href="mailto:' + u + '@' + d + '" style="color:#4a7c59;">' + u + '@' + d + '</a>';
+            }
+        })();
+
         function setLang(lang) {
             document.querySelectorAll('[data-lang]').forEach(function(el) {
                 el.classList

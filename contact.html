@@ -236,8 +236,8 @@
         <span data-lang="en" class="show">For support, feedback, or general inquiries:</span>
         <span data-lang="ko">지원 요청, 피드백, 일반 문의:</span>
       </p>
-      <a href="mailto:support@iamcraft.co" class="email-link">
-        ✉ support@iamcraft.co
+      <a href="/cdn-cgi/l/email-protection#added8ddddc2dfd9edc4ccc0cedfcccbd983cec2" class="email-link">
+        ✉ <span class="__cf_email__" data-cfemail="d0a3a5a0a0bfa2a490b9b1bdb3a2b1b6a4feb3bf">[email&#160;protected]</span>
       </a>
       <p class="response-time">
         <span data-lang="en" class="show">We typically respond within 24–48 hours.</span>
@@ -290,18 +290,16 @@
 
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Build email to avoid Cloudflare obfuscation
+  (function() {
+    var u = 'support', d = 'iamcraft.co';
+    var el = document.getElementById('contact-email-main');
+    if (el) { el.href = 'mailto:' + u + '@' + d; }
+  })();
+
   function setLang(lang) {
     document.querySelectorAll('[data-lang]').forEach(function(el) {
       el.classList.toggle('show', el.dataset.lang === lang);
     });
-    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-    document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
-    document.documentElement.lang = lang;
-  }
-  var isKo = navigator.language.startsWith('ko');
-  setLang(isKo ? 'ko' : 'en');
-</script>
-
-</body>
-</html>
+    document.getElementById('btn-en').classList.toggle('active', lang ===
